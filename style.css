@@ -136,8 +136,10 @@ main { position: relative; z-index: 2; }
 
 /* ---------- Rapporten ---------- */
 .rapporten {
-  padding: 4rem clamp(1.5rem, 7vw, 7rem) 10rem;
-  max-width: 1280px;
+  /* bijna schermbreed: de rapporten schuiven over de kaart van Nederland heen */
+  padding: 4rem clamp(1.25rem, 3vw, 3.5rem) 10rem;
+  max-width: none;
+  background: linear-gradient(180deg, rgba(3,3,4,0), rgba(3,3,4,.55) 10rem, rgba(3,3,4,.55));
 }
 .rapporten h2 {
   font-family: var(--serif); font-weight: 400; font-size: 1.4rem;
@@ -147,8 +149,8 @@ main { position: relative; z-index: 2; }
 /* Raster van voorpagina's, met boven elke voorpagina een zwevend citaat */
 .rapport-lijst {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
-  gap: 6.5rem 3rem;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 360px), 1fr));
+  gap: 7rem clamp(1.5rem, 3vw, 3.5rem);
 }
 .rapport {
   opacity: 0; transform: translateY(28px);
@@ -159,22 +161,21 @@ main { position: relative; z-index: 2; }
 
 .citaat {
   display: block; position: relative; z-index: 2;
-  margin: -3.6rem .3rem -1.6rem;
-  padding: .85rem 1rem .75rem;
+  margin: -4rem .3rem -1.8rem; padding: 1rem 1.2rem .85rem;
   background: rgba(14, 13, 12, .82);
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
   border: 1px solid rgba(var(--licht-rgb), .35);
   border-radius: 12px;
   box-shadow: 0 18px 40px -18px rgba(0,0,0,.9), 0 0 24px -10px rgba(var(--licht-rgb), .5);
   font-family: var(--serif); font-style: italic;
-  font-size: 1.08rem; line-height: 1.45; color: var(--tekst);
+  font-size: 1.2rem; line-height: 1.45; color: var(--tekst);
   animation: drijf 6s ease-in-out infinite;
   animation-delay: var(--vertraging, 0s);
   transition: transform .5s var(--zacht), border-color .4s;
 }
 .citaat-tekst::before { content: "“"; color: var(--licht); margin-right: .1em; }
 .citaat-tekst::after { content: "”"; color: var(--licht); margin-left: .05em; }
-.citaat.samenvatting { font-style: normal; font-size: 1rem; }
+.citaat.samenvatting { font-style: normal; font-size: 1.1rem; }
 .citaat.samenvatting .citaat-tekst::before, .citaat.samenvatting .citaat-tekst::after { content: none; }
 .citaat .citaat-tekst {
   display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden;
@@ -250,10 +251,13 @@ main { position: relative; z-index: 2; }
 
 /* ---------- Footer ---------- */
 footer {
-  position: fixed; right: clamp(1rem, 2.5vw, 2rem); bottom: clamp(.8rem, 2vw, 1.5rem);
+  position: fixed; right: 0; bottom: 0;
+  padding: 1.6rem clamp(1rem, 2.5vw, 2rem) clamp(.8rem, 2vw, 1.5rem) 3rem;
   z-index: 3;
   display: flex; flex-direction: column; align-items: flex-end; gap: .2rem;
   font-size: .78rem; color: var(--gedempt); text-align: right;
+  /* donkere gloed zodat de tekst leesbaar blijft als de rapporten eronder door schuiven */
+  background: radial-gradient(ellipse at 100% 100%, rgba(3,3,4,.95) 0%, rgba(3,3,4,.85) 45%, rgba(3,3,4,0) 75%);
 }
 footer a { color: var(--gedempt); text-decoration: none; transition: color .2s; }
 footer a:hover, footer a:focus-visible { color: var(--licht); }
@@ -263,7 +267,7 @@ footer .contact::after { content: " ↗"; color: var(--licht); }
 
 @media (max-width: 700px) {
   .vignet { background: linear-gradient(180deg, rgba(3,3,4,.6), rgba(3,3,4,.4) 60%, rgba(3,3,4,.8)); }
-  .rapport-lijst { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 6rem 1.6rem; }
+  .rapport-lijst { grid-template-columns: 1fr; gap: 6rem 1.6rem; }
   .procent { text-align: left; }
   footer {
     left: 0; right: 0; bottom: 0; padding: 2.2rem 1rem .8rem;

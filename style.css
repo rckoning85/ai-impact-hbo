@@ -147,8 +147,8 @@ main { position: relative; z-index: 2; }
 /* Raster van voorpagina's, met boven elke voorpagina een zwevend citaat */
 .rapport-lijst {
   list-style: none; margin: 0; padding: 0;
-  display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 5.5rem 2.6rem;
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+  gap: 6.5rem 3rem;
 }
 .rapport {
   opacity: 0; transform: translateY(28px);
@@ -159,7 +159,7 @@ main { position: relative; z-index: 2; }
 
 .citaat {
   display: block; position: relative; z-index: 2;
-  margin: -3.2rem .4rem -1.4rem;
+  margin: -3.6rem .3rem -1.6rem;
   padding: .85rem 1rem .75rem;
   background: rgba(14, 13, 12, .82);
   backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
@@ -167,22 +167,22 @@ main { position: relative; z-index: 2; }
   border-radius: 12px;
   box-shadow: 0 18px 40px -18px rgba(0,0,0,.9), 0 0 24px -10px rgba(var(--licht-rgb), .5);
   font-family: var(--serif); font-style: italic;
-  font-size: .92rem; line-height: 1.4; color: var(--tekst);
+  font-size: 1.08rem; line-height: 1.45; color: var(--tekst);
   animation: drijf 6s ease-in-out infinite;
   animation-delay: var(--vertraging, 0s);
   transition: transform .5s var(--zacht), border-color .4s;
 }
 .citaat-tekst::before { content: "“"; color: var(--licht); margin-right: .1em; }
 .citaat-tekst::after { content: "”"; color: var(--licht); margin-left: .05em; }
-.citaat.samenvatting { font-style: normal; font-size: .84rem; }
+.citaat.samenvatting { font-style: normal; font-size: 1rem; }
 .citaat.samenvatting .citaat-tekst::before, .citaat.samenvatting .citaat-tekst::after { content: none; }
 .citaat .citaat-tekst {
-  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 4; overflow: hidden;
+  display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 5; overflow: hidden;
 }
 .rapport a:hover .citaat-tekst, .rapport a:focus-visible .citaat-tekst { -webkit-line-clamp: unset; }
 .citaat .pagina {
   display: block; margin-top: .45rem;
-  font-family: var(--sans); font-style: normal; font-size: .72rem; letter-spacing: .06em;
+  font-family: var(--sans); font-style: normal; font-size: .82rem; letter-spacing: .06em;
   color: var(--gedempt);
 }
 @keyframes drijf { 50% { transform: translateY(-5px); } }
@@ -209,8 +209,8 @@ main { position: relative; z-index: 2; }
   content: ""; position: absolute; left: 0; right: 0; top: 0; height: 1.3rem;
   background: var(--licht); opacity: .9;
 }
-.omslag-org { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; opacity: .7; margin-top: 1.4rem; }
-.omslag-titel { font-family: var(--serif); font-size: 1.12rem; line-height: 1.25; margin-top: .6rem; }
+.omslag-org { font-size: .78rem; letter-spacing: .08em; text-transform: uppercase; opacity: .7; margin-top: 1.4rem; }
+.omslag-titel { font-family: var(--serif); font-size: 1.35rem; line-height: 1.25; margin-top: .6rem; }
 .omslag-jaar { margin-top: auto; font-size: .75rem; opacity: .6; }
 
 .open-rapport {
@@ -231,9 +231,9 @@ main { position: relative; z-index: 2; }
 .rapport a:hover .open-rapport, .rapport a:focus-visible .open-rapport { opacity: 1; transform: translate(-50%, 0); }
 
 .rapport-onder { display: block; margin-top: 1rem; }
-.rapport-titel { display: block; font-family: var(--serif); font-size: 1rem; line-height: 1.35; transition: color .25s; }
+.rapport-titel { display: block; font-family: var(--serif); font-size: 1.15rem; line-height: 1.35; transition: color .25s; }
 .rapport a:hover .rapport-titel, .rapport a:focus-visible .rapport-titel { color: var(--licht); }
-.rapport-meta { display: block; font-size: .78rem; color: var(--gedempt); margin-top: .25rem; }
+.rapport-meta { display: block; font-size: .88rem; color: var(--gedempt); margin-top: .25rem; }
 .rapport-gewicht { display: flex; align-items: center; gap: .7rem; margin-top: .7rem; }
 .rapport-gewicht .balk { flex: 1; }
 .procent { display: block; }
@@ -244,7 +244,7 @@ main { position: relative; z-index: 2; }
   box-shadow: 0 0 12px rgba(var(--licht-rgb), .6);
   transition: width 1.1s var(--zacht) .2s;
 }
-.procent { font-size: .78rem; color: var(--gedempt); font-variant-numeric: tabular-nums; min-width: 2.6em; text-align: right; }
+.procent { font-size: .88rem; color: var(--gedempt); font-variant-numeric: tabular-nums; min-width: 2.6em; text-align: right; }
 
 .opleidingen { margin-top: 3rem; font-size: .82rem; color: var(--gedempt); line-height: 1.6; max-width: 40rem; }
 
@@ -263,7 +263,7 @@ footer .contact::after { content: " ↗"; color: var(--licht); }
 
 @media (max-width: 700px) {
   .vignet { background: linear-gradient(180deg, rgba(3,3,4,.6), rgba(3,3,4,.4) 60%, rgba(3,3,4,.8)); }
-  .rapport-lijst { grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: 5rem 1.6rem; }
+  .rapport-lijst { grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 6rem 1.6rem; }
   .procent { text-align: left; }
   footer {
     left: 0; right: 0; bottom: 0; padding: 2.2rem 1rem .8rem;

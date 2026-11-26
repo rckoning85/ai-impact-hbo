@@ -112,6 +112,54 @@
       "status": "afgewezen",
       "reden": "Overzichtsartikel van een platform zonder eigen onderzoek; verwijst naar primaire bronnen.",
       "bekeken": "2026-11-26"
+    },
+    {
+      "titel": "OECD working paper: The impact of AI on the workplace – evidence from OECD case studies",
+      "organisatie": "OESO",
+      "url": "https://www.oecd.org/els/the-impact-of-ai-on-the-workplace-evidence-from-oecd-case-studies-of-ai-implementation-2247ce58-en.htm",
+      "status": "te-beoordelen",
+      "reden": "Mogelijk bruikbaar (internationaal); pagina niet bereikbaar (403), nog te lezen.",
+      "bekeken": "2026-11-26"
+    },
+    {
+      "titel": "Hoge loonkosten dwingen ondernemers tot AI-gebruik",
+      "organisatie": "ABN AMRO",
+      "url": "https://www.abnamro.nl/nl/zakelijk/insights/sectoren-en-trends/sectorprognoses/alle-sectoren/hoge-loonkosten-dwingen-ondernemers-tot-ai-gebruik.html",
+      "status": "te-beoordelen",
+      "reden": "Sectorprognose van een bank; pagina nog niet gelezen.",
+      "bekeken": "2026-11-26"
+    },
+    {
+      "titel": "Hopes & Fears 2026 (Nederland)",
+      "organisatie": "PwC",
+      "url": "https://www.pwc.nl/nl/actueel-en-publicaties/themas/de-toekomst-van-werk/hopes-and-fears-2026.html",
+      "status": "te-beoordelen",
+      "reden": "Enquête onder Nederlandse werknemers door een consultancy; methode en pdf nog te controleren.",
+      "bekeken": "2026-11-26"
+    },
+    {
+      "titel": "Nederlandse Innovatie Monitor 2026",
+      "organisatie": "UvA en SEO",
+      "url": "https://nieuws.nl/economie/onderzoek-88-procent-van-nederlandse-bedrijven-gebruikt-ai",
+      "status": "te-beoordelen",
+      "reden": "Alleen nieuwsbericht gezien; primair rapport nog te vinden.",
+      "bekeken": "2026-11-26"
+    },
+    {
+      "titel": "2026 European Employment and Social Outlook",
+      "organisatie": "Europese Commissie",
+      "url": "https://digital-skills-jobs.europa.eu/en/latest/news/what-makes-job-good-key-findings-2026-european-employment-social-outlook",
+      "status": "te-beoordelen",
+      "reden": "Alleen samenvatting gezien; rapport nog te lezen.",
+      "bekeken": "2026-11-26"
+    },
+    {
+      "titel": "Een kwart van de werkenden gebruikt vaak nieuwe technologie zoals GenAI",
+      "organisatie": "Rabobank",
+      "url": "https://www.rabobank.nl/kennis/d011514607-een-kwart-van-de-werkenden-gebruikt-vaak-nieuwe-technologie-zoals-genai",
+      "status": "te-beoordelen",
+      "reden": "Nog niet gelezen.",
+      "bekeken": "2026-11-26"
     }
   ]
 }

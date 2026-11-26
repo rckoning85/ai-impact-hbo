@@ -83,6 +83,10 @@
         {
           "id": "tno-genai-werk-2025",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -137,6 +141,10 @@
         {
           "id": "uwv-ai-gebruik-2026",
           "specificiteit": "sector"
+        },
+        {
+          "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -188,6 +196,10 @@
         {
           "id": "uwv-ai-gebruik-2026",
           "specificiteit": "sector"
+        },
+        {
+          "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -243,6 +255,10 @@
         {
           "id": "tno-genai-werk-2025",
           "specificiteit": "sector"
+        },
+        {
+          "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -299,6 +315,10 @@
         {
           "id": "tno-genai-werk-2025",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -354,6 +374,10 @@
         {
           "id": "tno-genai-werk-2025",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -405,6 +429,10 @@
         {
           "id": "tno-genai-werk-2025",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
         }
       ]
     }
@@ -417,7 +445,13 @@
       "url": "https://www.dnb.nl/media/4hpb51p3/publicatie-dnb-analyse-ai-in-nederland-def.pdf",
       "bereik": "nl",
       "brontype": "overheid",
-      "kern": "Hbo- en wo-opgeleiden zijn oververtegenwoordigd in sterk blootgestelde beroepen, zoals softwareontwikkelaars, accountants en beleidsadviseurs; minder banen is volgens DNB geen automatisme."
+      "kern": "Hbo- en wo-opgeleiden zijn oververtegenwoordigd in sterk blootgestelde beroepen, zoals softwareontwikkelaars, accountants en beleidsadviseurs; minder banen is volgens DNB geen automatisme.",
+      "citaat": {
+        "tekst": "Volgens deze analyse heeft ongeveer een kwart van de Nederlandse werkenden een beroep waarin AI bij ten minste de helft van de taken de uitvoering kan versnellen.",
+        "pagina": 4,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/dnb-ai-nl-2026.jpg"
     },
     "roa-hbo-ai-2026": {
       "titel": "Loopbanen van hbo-afgestudeerden in ontwikkeling: arbeidsmarktpositie, leven lang ontwikkelen en de rol van AI",
@@ -446,7 +480,13 @@
       "url": "https://www.uwv.nl/assets-kai/files/2189148b-b975-475a-987f-e307bfeeae54/Op_weg_naar_AI_die_werkt_voor_iedereen_DEF.pdf",
       "bereik": "nl",
       "brontype": "overheid",
-      "kern": "Zakelijke, juridische en financiële dienstverlening en ICT merken de effecten het eerst; routinematig taal- en datawerk is het kwetsbaarst; digitale, kritische en sociale vaardigheden worden belangrijker."
+      "kern": "Zakelijke, juridische en financiële dienstverlening en ICT merken de effecten het eerst; routinematig taal- en datawerk is het kwetsbaarst; digitale, kritische en sociale vaardigheden worden belangrijker.",
+      "citaat": {
+        "tekst": "Aan de andere kant zal er meer vraag ontstaan naar digitale, kritische en ethische vaardigheden.",
+        "pagina": 4,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/uwv-ai-voor-iedereen.jpg"
     },
     "ser-ai-werk-2025": {
       "titel": "AI en werk – Samen naar een werkende toekomst met AI",
@@ -455,7 +495,13 @@
       "url": "https://www.ser.nl/-/media/ser/downloads/adviezen/2025/ai-en-werk.pdf",
       "bereik": "nl",
       "brontype": "overheid",
-      "kern": "AI vervangt vooral taken, niet hele beroepen; overheid, onderwijs en werkgevers moeten samen meer doen aan scholing en een leven lang ontwikkelen."
+      "kern": "AI vervangt vooral taken, niet hele beroepen; overheid, onderwijs en werkgevers moeten samen meer doen aan scholing en een leven lang ontwikkelen.",
+      "citaat": {
+        "tekst": "Duidelijk is dat er verschuivingen op de arbeidsmarkt zullen ontstaan en er groepen mensen ander werk zullen moeten vinden.",
+        "pagina": 15,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/ser-ai-werk-2025.jpg"
     },
     "esb-jongeren-genai-2026": {
       "titel": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
@@ -473,7 +519,13 @@
       "url": "https://www.eerstekamer.nl/behandeling/20251006/brief_regering_inzet_op_realisatie/document3/f=/vmrfgzp7qnw8.pdf",
       "bereik": "nl",
       "brontype": "overheid",
-      "kern": "Het kabinet zet AI in de zorg eerst in om administratieve lasten te verlichten; AI ondersteunt, de eindverantwoordelijkheid blijft bij de zorgprofessional."
+      "kern": "Het kabinet zet AI in de zorg eerst in om administratieve lasten te verlichten; AI ondersteunt, de eindverantwoordelijkheid blijft bij de zorgprofessional.",
+      "citaat": {
+        "tekst": "We starten, conform de afspraken in het AZWA, in eerste instantie met een focus op het verlichten van de administratieve lasten in de zorg met AI.",
+        "pagina": 1,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/vws-ai-zorg-2025.jpg"
     },
     "mi-ai-monitor-ggz-2026": {
       "titel": "AI Monitor GGZ 2026",
@@ -483,7 +535,8 @@
       "url": "https://mxi.nl/uploads/files/publication/ai-monitor-ggz-2026.pdf",
       "bereik": "nl",
       "brontype": "onderzoeksbureau",
-      "kern": "96% van de deelnemende ggz-organisaties gebruikt spraakgestuurd rapporteren; werkdruk verlagen is voor alle organisaties de belangrijkste reden, maar de randvoorwaarden zijn nergens volledig op orde."
+      "kern": "96% van de deelnemende ggz-organisaties gebruikt spraakgestuurd rapporteren; werkdruk verlagen is voor alle organisaties de belangrijkste reden, maar de randvoorwaarden zijn nergens volledig op orde.",
+      "omslag": "omslagen/mi-ai-monitor-ggz-2026.jpg"
     },
     "swn-nulmeting-ai-2026": {
       "titel": "Onderzoek: AI biedt kansen voor sociaal werk, menselijke maat blijft leidend",
@@ -539,7 +592,13 @@
       "url": "https://www.ilo.org/publications/generative-ai-and-jobs-2025-update",
       "bereik": "mondiaal",
       "brontype": "internationaal",
-      "kern": "Een op de vier werkenden wereldwijd zit in een beroep met enige blootstelling aan generatieve AI, in rijke landen 34%; de meeste banen veranderen eerder dan dat ze verdwijnen."
+      "kern": "Een op de vier werkenden wereldwijd zit in een beroep met enige blootstelling aan generatieve AI, in rijke landen 34%; de meeste banen veranderen eerder dan dat ze verdwijnen.",
+      "citaat": {
+        "tekst": "most jobs will be transformed rather than made redundant.",
+        "pagina": 1,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/ilo-genai-2025.jpg"
     },
     "wef-fojr-2025": {
       "titel": "The Future of Jobs Report 2025",
@@ -557,7 +616,13 @@
       "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine/",
       "bereik": "mondiaal",
       "brontype": "wetenschap",
-      "kern": "Werkgelegenheid van 22- tot 25-jarigen in AI-gevoelige beroepen zoals softwareontwikkeling ligt 19% onder trend, vooral door minder aannames; waar AI aanvult blijft het werk stabiel of groeit het."
+      "kern": "Werkgelegenheid van 22- tot 25-jarigen in AI-gevoelige beroepen zoals softwareontwikkeling ligt 19% onder trend, vooral door minder aannames; waar AI aanvult blijft het werk stabiel of groeit het.",
+      "citaat": {
+        "tekst": "Employment of young workers in AI-exposed jobs now stands 19% below where it would be had it kept pace with that of their less-exposed peers",
+        "pagina": 8,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/stanford-canaries-2026.jpg"
     },
     "uwv-ai-gebruik-2026": {
       "titel": "AI-gebruik blijft stijgen, begeleiding blijft achter",
@@ -589,6 +654,21 @@
         "geverifieerd": true
       },
       "omslag": "omslagen/tno-genai-werk-2025.jpg"
+    },
+    "tno-toekomst-werk-2026": {
+      "titel": "De toekomst van werk volgens werknemers en werkgevers",
+      "organisatie": "TNO",
+      "datum": "2026-05-29",
+      "url": "https://publications.tno.nl/publication/34646203/gLOifbbb/TNO-2026-16239.pdf",
+      "bereik": "nl",
+      "brontype": "wetenschap",
+      "kern": "Technologie als AI levert vooral productiviteitswinst op; AI automatiseert eerst routinematige cognitieve taken, waardoor het overgebleven werk zwaarder wordt en mentale belasting een groot aandachtspunt is.",
+      "citaat": {
+        "tekst": "AI zal naar verwachting als eerste routinematige cognitieve taken automatiseren, waardoor niet alleen de productiviteit toeneemt, maar ook de moeilijkheidsgraad van de overgebleven taken van werknemers",
+        "pagina": 19,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/tno-toekomst-werk-2026.jpg"
     }
   }
 }

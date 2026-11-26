@@ -1,0 +1,37 @@
+name: Bron voorstellen
+description: Stel een rapport of organisatie voor die de wekelijkse scan moet meenemen.
+title: "Bronvoorstel"
+labels: ["bronvoorstel"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Plak hieronder de link. Bij de volgende wekelijkse scan wordt de bron beoordeeld.
+        Op de pagina **Alle doorzochte bronnen** zie je daarna of hij meetelt, en zo niet, waarom niet.
+  - type: dropdown
+    id: soort
+    attributes:
+      label: Soort bron
+      options:
+        - Eén rapport
+        - Organisatie (voortaan elke week doorzoeken)
+    validations:
+      required: true
+  - type: input
+    id: link
+    attributes:
+      label: Link
+      description: De link naar het rapport, of naar de website van de organisatie.
+      placeholder: https://
+    validations:
+      required: true
+  - type: input
+    id: naam
+    attributes:
+      label: Naam (optioneel)
+      description: Titel van het rapport of naam van de organisatie.
+  - type: textarea
+    id: opmerking
+    attributes:
+      label: Opmerking (optioneel)
+      description: Bijvoorbeeld voor welke sector de bron relevant is.

@@ -1,0 +1,96 @@
+# Zet een bronvoorstel (GitHub-issue via het formulier) om in een regel in data/voorstellen.json.
+# Geen AI: alleen overnemen en opslaan. De wekelijkse scan beoordeelt het voorstel.
+# Alleen voorstellen van de eigenaar en medewerkers van dit project worden automatisch verwerkt;
+# voorstellen van anderen blijven openstaan tot de eigenaar het label 'goedgekeurd' toevoegt.
+name: Bronvoorstel verwerken
+
+on:
+  issues:
+    types: [opened, labeled]
+
+permissions:
+  contents: write
+  issues: write
+
+concurrency:
+  group: bronvoorstellen
+  cancel-in-progress: false
+
+jobs:
+  verwerk:
+    if: contains(github.event.issue.labels.*.name, 'bronvoorstel')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Voorstel opslaan
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const issue = context.payload.issue;
+            const labels = issue.labels.map(l => l.name);
+            // Bij 'labeled' alleen reageren op goedkeuring door de beheerder (voorkomt dubbele verwerking)
+            if (context.payload.action === 'labeled' && context.payload.label.name !== 'goedgekeurd') return;
+            const vertrouwd = ['OWNER', 'MEMBER', 'COLLABORATOR'].includes(issue.author_association) || labels.includes('goedgekeurd');
+
+            if (!vertrouwd) {
+              if (context.payload.action === 'opened') {
+                await github.rest.issues.createComment({ ...context.repo, issue_number: issue.number,
+                  body: 'Dank voor je voorstel! De beheerder bekijkt het en zet het daarna door naar de wekelijkse scan.' });
+              }
+              return;
+            }
+
+            // Velden uit het formulier halen
+            const veld = (kop) => {
+              const m = (issue.body || '').match(new RegExp('### ' + kop + '\\s*\\n+([\\s\\S]*?)(?=\\n### |$)'));
+              const v = m ? m[1].trim() : '';
+              return v === '_No response_' ? '' : v;
+            };
+            const link = veld('Link');
+            if (!/^https?:\/\/\S+$/.test(link)) {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: issue.number,
+                body: 'De link lijkt niet geldig. Pas het voorstel aan met een link die met https:// begint.' });
+              return;
+            }
+
+            const pad = 'data/voorstellen.json';
+            const data = JSON.parse(fs.readFileSync(pad, 'utf8'));
+            if (data.voorstellen.some(v => v.link === link)) {
+              await github.rest.issues.createComment({ ...context.repo, issue_number: issue.number, body: 'Deze link was al voorgesteld.' });
+              await github.rest.issues.update({ ...context.repo, issue_number: issue.number, state: 'closed' });
+              return;
+            }
+            data.voorstellen.push({
+              soort: veld('Soort bron').startsWith('Organisatie') ? 'organisatie' : 'rapport',
+              link,
+              naam: veld('Naam \\(optioneel\\)').slice(0, 300),
+              opmerking: veld('Opmerking \\(optioneel\\)').slice(0, 1000),
+              voorgesteld: new Date().toISOString().slice(0, 10),
+              issue: issue.number,
+              verwerkt: false
+            });
+            fs.writeFileSync(pad, JSON.stringify(data, null, 2) + '\n');
+            core.setOutput('opgeslagen', 'ja');
+
+      - name: Opslaan in het project
+        run: |
+          if git diff --quiet; then exit 0; fi
+          git config user.name "bronvoorstel-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/voorstellen.json
+          git commit -m "Bronvoorstel #${{ github.event.issue.number }} toegevoegd"
+          git push
+
+      - name: Bevestigen en sluiten
+        if: success()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { execSync } = require('child_process');
+            const laatste = execSync('git log -1 --pretty=%s').toString();
+            if (!laatste.includes('#' + context.payload.issue.number)) return;
+            await github.rest.issues.createComment({ ...context.repo, issue_number: context.payload.issue.number,
+              body: 'Opgeslagen. De bron wordt bij de volgende wekelijkse scan beoordeeld; de uitkomst verschijnt op de pagina Alle doorzochte bronnen.' });
+            await github.rest.issues.update({ ...context.repo, issue_number: context.payload.issue.number, state: 'closed' });

@@ -1,0 +1,279 @@
+{
+  "bijgewerkt": "2026-11-26",
+  "methode": {
+    "halfwaardetijd_maanden": 18,
+    "drempel": 0.05,
+    "bereik": { "nl": 1.0, "eu": 0.7, "mondiaal": 0.5 },
+    "specificiteit": { "sector": 1.0, "generiek": 0.6 },
+    "brontype": { "planbureau": 1.0, "overheid": 1.0, "wetenschap": 1.0, "internationaal": 1.0, "onderzoeksbureau": 0.8, "consultancy": 0.8, "commercieel": 0.6 }
+  },
+  "sectoren": [
+    {
+      "id": "gezondheidszorg",
+      "kleur": "#ff7f8f",
+      "naam": "Gezondheidszorg",
+      "opleidingen": ["Verpleegkunde", "Fysiotherapie", "Management in de Zorg", "Master Advanced Nursing Practice", "Master Integrale Gezondheidsbevordering"],
+      "zin": "vooral te liggen in het verlichten van administratie en verslaglegging, terwijl de zorg zelf mensenwerk blijft en de zorgprofessional eindverantwoordelijk is.",
+      "vaardigheden": {
+        "meer": ["AI-uitkomsten kritisch beoordelen", "werken met spraakgestuurd rapporteren", "uitleggen en samen beslissen met patiënten", "privacy- en databewustzijn"],
+        "minder": ["handmatig rapporteren", "dossiervoering"]
+      },
+      "rapporten": [
+        { "id": "vws-ai-zorg-2025", "specificiteit": "sector" },
+        { "id": "mi-ai-monitor-ggz-2026", "specificiteit": "sector" },
+        { "id": "dnb-ai-nl-2026", "specificiteit": "generiek" },
+        { "id": "roa-hbo-ai-2026", "specificiteit": "generiek" },
+        { "id": "uwv-ai-voor-iedereen", "specificiteit": "generiek" },
+        { "id": "ser-ai-werk-2025", "specificiteit": "generiek" },
+        { "id": "ilo-genai-2025", "specificiteit": "generiek" }
+      ]
+    },
+    {
+      "id": "sociaal-werk",
+      "kleur": "#ffad5c",
+      "naam": "Sociaal werk en psychologie",
+      "opleidingen": ["Social Work", "Social Work: Jeugd in Onderwijs", "Toegepaste Psychologie", "Vaktherapie", "Master Jeugd en Gezin"],
+      "zin": "beperkt te blijven tot ondersteuning bij verslaglegging en administratie, met persoonlijk contact en professioneel oordeel als kern van het vak.",
+      "vaardigheden": {
+        "meer": ["digitale vaardigheden, ook om cliënten te helpen", "ethisch afwegen en privacybewustzijn", "netwerk- en datavaardigheid"],
+        "minder": ["handmatige verslaglegging", "dossiervorming"]
+      },
+      "rapporten": [
+        { "id": "swn-nulmeting-ai-2026", "specificiteit": "sector" },
+        { "id": "sww-toekomst-sociaal-werk-2026", "specificiteit": "sector" },
+        { "id": "mi-ai-monitor-ggz-2026", "specificiteit": "sector" },
+        { "id": "roa-hbo-ai-2026", "specificiteit": "generiek" },
+        { "id": "ser-ai-werk-2025", "specificiteit": "generiek" },
+        { "id": "dnb-ai-nl-2026", "specificiteit": "generiek" }
+      ]
+    },
+    {
+      "id": "onderwijs",
+      "kleur": "#ffe06b",
+      "naam": "Onderwijs",
+      "opleidingen": ["Pabo (alle varianten)", "Leraar Gezondheidszorg en Welzijn", "Leraar Omgangskunde", "Docent Dans/Euritmie", "Docent Muziek", "Master Duurzaam Onderwijs"],
+      "zin": "het lesgeven niet over te nemen maar wel te veranderen: AI neemt voorbereidend werk uit handen, terwijl leren en toetsen opnieuw doordacht moeten worden.",
+      "vaardigheden": {
+        "meer": ["AI-geletterdheid, bij jezelf en bij leerlingen", "didactisch ontwerpen met AI", "toetsen in een wereld met AI"],
+        "minder": ["lesmateriaal vanaf nul maken", "routinematig nakijken"]
+      },
+      "rapporten": [
+        { "id": "oecd-deo-2026", "specificiteit": "sector" },
+        { "id": "roa-hbo-ai-2026", "specificiteit": "generiek" },
+        { "id": "cbs-ai-samenleving-2026", "specificiteit": "generiek" },
+        { "id": "ser-ai-werk-2025", "specificiteit": "generiek" },
+        { "id": "dnb-ai-nl-2026", "specificiteit": "generiek" }
+      ]
+    },
+    {
+      "id": "recht",
+      "kleur": "#86b3ff",
+      "naam": "Recht",
+      "opleidingen": ["HBO-Rechten", "Sociaal Juridische Dienstverlening"],
+      "zin": "groot te zijn voor zoek-, lees- en schrijfwerk, waardoor juridisch oordeel, strategie en het controleren van AI-output het vak gaan bepalen.",
+      "vaardigheden": {
+        "meer": ["AI-output juridisch toetsen op bronnen en fouten", "juridisch oordeel en strategie", "cliëntcontact en heldere uitleg"],
+        "minder": ["handmatig jurisprudentie zoeken", "standaarddocumenten opstellen"]
+      },
+      "rapporten": [
+        { "id": "uwv-ai-voor-iedereen", "specificiteit": "sector" },
+        { "id": "legal-benchmarks-2026", "specificiteit": "sector" },
+        { "id": "dnb-ai-nl-2026", "specificiteit": "generiek" },
+        { "id": "esb-jongeren-genai-2026", "specificiteit": "generiek" },
+        { "id": "roa-hbo-ai-2026", "specificiteit": "generiek" },
+        { "id": "ser-ai-werk-2025", "specificiteit": "generiek" }
+      ]
+    },
+    {
+      "id": "economie-management",
+      "kleur": "#73e0a8",
+      "naam": "Economie en management",
+      "opleidingen": ["Commerciële Economie", "Human Resource Management", "Communicatie"],
+      "zin": "snel en breed voelbaar te zijn in routinematig tekst-, data- en administratiewerk, waarbij starters als eersten merken dat instapfuncties veranderen.",
+      "vaardigheden": {
+        "meer": ["strategisch en kritisch denken", "AI-tools inzetten en resultaten controleren", "communiceren en samenwerken"],
+        "minder": ["routinematige contentproductie", "standaardrapportages en administratie"]
+      },
+      "rapporten": [
+        { "id": "dnb-ai-nl-2026", "specificiteit": "sector" },
+        { "id": "roa-hbo-ai-2026", "specificiteit": "sector" },
+        { "id": "uwv-ai-voor-iedereen", "specificiteit": "sector" },
+        { "id": "esb-jongeren-genai-2026", "specificiteit": "generiek" },
+        { "id": "wef-fojr-2025", "specificiteit": "generiek" },
+        { "id": "ser-ai-werk-2025", "specificiteit": "generiek" }
+      ]
+    },
+    {
+      "id": "ict",
+      "kleur": "#5fe3ff",
+      "naam": "ICT",
+      "opleidingen": ["Informatica", "Informatica: Forensisch ICT", "Master Digital Forensics"],
+      "zin": "groot te zijn: programmeren verandert snel, beginnende ontwikkelaars worden minder vaak aangenomen en het werk verschuift naar ontwerpen, toepassen en controleren van AI.",
+      "vaardigheden": {
+        "meer": ["systeemontwerp en architectuur", "AI toepassen, implementeren en controleren", "cybersecurity"],
+        "minder": ["routinematig programmeren"]
+      },
+      "rapporten": [
+        { "id": "stanford-canaries-2026", "specificiteit": "sector" },
+        { "id": "dnb-ai-nl-2026", "specificiteit": "sector" },
+        { "id": "uwv-ai-voor-iedereen", "specificiteit": "sector" },
+        { "id": "roa-hbo-ai-2026", "specificiteit": "sector" },
+        { "id": "esb-jongeren-genai-2026", "specificiteit": "generiek" },
+        { "id": "wef-fojr-2025", "specificiteit": "generiek" }
+      ]
+    },
+    {
+      "id": "life-sciences",
+      "kleur": "#c39bff",
+      "naam": "Life sciences",
+      "opleidingen": ["Biologie en Medisch Laboratoriumonderzoek", "Chemie", "Bio-informatica"],
+      "zin": "vooral het onderzoek en de data-analyse te versnellen en nieuwe taken toe te voegen, al is er nog weinig onderzoek dat specifiek over dit werkveld gaat.",
+      "vaardigheden": {
+        "meer": ["data-analyse en programmeren", "resultaten interpreteren en valideren", "AI toepassen in onderzoek"],
+        "minder": ["handmatige dataverwerking"]
+      },
+      "rapporten": [
+        { "id": "roa-hbo-ai-2026", "specificiteit": "generiek" },
+        { "id": "dnb-ai-nl-2026", "specificiteit": "generiek" },
+        { "id": "wef-fojr-2025", "specificiteit": "generiek" },
+        { "id": "oecd-eo-2026", "specificiteit": "generiek" },
+        { "id": "ilo-genai-2025", "specificiteit": "generiek" }
+      ]
+    }
+  ],
+  "rapporten": {
+    "dnb-ai-nl-2026": {
+      "titel": "DNB Analyse – De economische impact van AI in Nederland",
+      "organisatie": "De Nederlandsche Bank",
+      "datum": "2026-11-02",
+      "url": "https://www.dnb.nl/media/4hpb51p3/publicatie-dnb-analyse-ai-in-nederland-def.pdf",
+      "bereik": "nl", "brontype": "overheid",
+      "kern": "Hbo- en wo-opgeleiden zijn oververtegenwoordigd in sterk blootgestelde beroepen, zoals softwareontwikkelaars, accountants en beleidsadviseurs; minder banen is volgens DNB geen automatisme."
+    },
+    "roa-hbo-ai-2026": {
+      "titel": "Loopbanen van hbo-afgestudeerden in ontwikkeling: arbeidsmarktpositie, leven lang ontwikkelen en de rol van AI",
+      "organisatie": "ROA, Maastricht University",
+      "datum": "2026-09-24",
+      "url": "https://doi.org/10.26481/umarep.2026005",
+      "bereik": "nl", "brontype": "wetenschap",
+      "kern": "Bij 28% van de hbo'ers die AI gebruiken veranderden bestaande taken, vooral in commerciële, managements- en onderwijsberoepen; in technische beroepen komen er vooral nieuwe taken bij."
+    },
+    "cbs-ai-samenleving-2026": {
+      "titel": "AI in de samenleving: ervaringen en opinies",
+      "organisatie": "CBS",
+      "datum": "2026-09-01",
+      "datum_benaderd": true,
+      "url": "https://www.cbs.nl/nl-nl/longread/diversen/2026/ai-in-de-samenleving-ervaringen-en-opinies/4-opvattingen-over-ai-op-de-arbeidsmarkt",
+      "bereik": "nl", "brontype": "overheid",
+      "kern": "45% van de werkenden denkt dat AI hun werk deels of helemaal kan doen, bij hbo- en wo-opgeleiden 49%; leraren in het voortgezet onderwijs zijn het meest negatief over AI als oplossing voor tekorten."
+    },
+    "uwv-ai-voor-iedereen": {
+      "titel": "Op weg naar AI die werkt voor iedereen",
+      "organisatie": "UWV",
+      "datum": "2025-06-01",
+      "datum_benaderd": true,
+      "url": "https://www.uwv.nl/assets-kai/files/2189148b-b975-475a-987f-e307bfeeae54/Op_weg_naar_AI_die_werkt_voor_iedereen_DEF.pdf",
+      "bereik": "nl", "brontype": "overheid",
+      "kern": "Zakelijke, juridische en financiële dienstverlening en ICT merken de effecten het eerst; routinematig taal- en datawerk is het kwetsbaarst; digitale, kritische en sociale vaardigheden worden belangrijker."
+    },
+    "ser-ai-werk-2025": {
+      "titel": "AI en werk – Samen naar een werkende toekomst met AI",
+      "organisatie": "Sociaal-Economische Raad",
+      "datum": "2025-05-22",
+      "url": "https://www.ser.nl/-/media/ser/downloads/adviezen/2025/ai-en-werk.pdf",
+      "bereik": "nl", "brontype": "overheid",
+      "kern": "AI vervangt vooral taken, niet hele beroepen; overheid, onderwijs en werkgevers moeten samen meer doen aan scholing en een leven lang ontwikkelen."
+    },
+    "esb-jongeren-genai-2026": {
+      "titel": "Dalende werkgelegenheid onder Nederlandse jongeren die concurreren met GenAI",
+      "organisatie": "Rabobank (in ESB)",
+      "datum": "2026-01-22",
+      "url": "https://esb.nu/dalende-werkgelegenheid-onder-nederlandse-jongeren-die-concurreren-met-genai/",
+      "bereik": "nl", "brontype": "onderzoeksbureau",
+      "kern": "Het aantal werkende 15- tot 24-jarigen in de meest blootgestelde beroepen lag eind 2025 ruim 13% lager dan eind 2022; het is nog te vroeg om te spreken van een structurele verandering."
+    },
+    "vws-ai-zorg-2025": {
+      "titel": "Kamerbrief: Inzet op realisatie AI in de zorg",
+      "organisatie": "Ministerie van VWS",
+      "datum": "2025-10-06",
+      "url": "https://www.eerstekamer.nl/behandeling/20251006/brief_regering_inzet_op_realisatie/document3/f=/vmrfgzp7qnw8.pdf",
+      "bereik": "nl", "brontype": "overheid",
+      "kern": "Het kabinet zet AI in de zorg eerst in om administratieve lasten te verlichten; AI ondersteunt, de eindverantwoordelijkheid blijft bij de zorgprofessional."
+    },
+    "mi-ai-monitor-ggz-2026": {
+      "titel": "AI Monitor GGZ 2026",
+      "organisatie": "M&I/Partners",
+      "datum": "2026-10-02",
+      "datum_benaderd": true,
+      "url": "https://mxi.nl/uploads/files/publication/ai-monitor-ggz-2026.pdf",
+      "bereik": "nl", "brontype": "onderzoeksbureau",
+      "kern": "96% van de deelnemende ggz-organisaties gebruikt spraakgestuurd rapporteren; werkdruk verlagen is voor alle organisaties de belangrijkste reden, maar de randvoorwaarden zijn nergens volledig op orde."
+    },
+    "swn-nulmeting-ai-2026": {
+      "titel": "Onderzoek: AI biedt kansen voor sociaal werk, menselijke maat blijft leidend",
+      "organisatie": "Sociaal Werk Nederland",
+      "datum": "2026-11-11",
+      "url": "https://sociaalwerknederland.nl/actueel/onderzoek-ai-biedt-kansen-voor-sociaal-werk-menselijke-maat-blijft-leidend",
+      "bereik": "nl", "brontype": "onderzoeksbureau",
+      "kern": "88% van de 41 onderzochte organisaties gebruikt generatieve AI, vooral voor tekst, samenvatten en administratie; de AI-vaardigheden van medewerkers worden relatief laag ingeschat."
+    },
+    "sww-toekomst-sociaal-werk-2026": {
+      "titel": "Arbeidsmarktonderzoek naar de toekomst van sociaal werk",
+      "organisatie": "Sociaal Werk werkt!",
+      "datum": "2026-09-21",
+      "datum_benaderd": true,
+      "url": "https://www.sociaalwerk-werkt.nl/de-sector-in-beeld/arbeidsmarktonderzoek-toekomst-sociaal-werk",
+      "bereik": "nl", "brontype": "onderzoeksbureau",
+      "kern": "Technologie verandert vooral taken binnen functies; menselijk contact blijft leidend en digitale, netwerk- en datavaardigheden worden belangrijker."
+    },
+    "legal-benchmarks-2026": {
+      "titel": "Dutch legal AI adoption survey",
+      "organisatie": "Legal Benchmarks i.s.m. Zeno",
+      "datum": "2026-09-03",
+      "url": "https://www.advocatenblad.nl/2026/09/03/gebruik-ai-inmiddels-gemeengoed-in-advocatuur/",
+      "bereik": "nl", "brontype": "commercieel",
+      "kern": "98% van de ondervraagde advocaten gebruikt AI wekelijks voor juridisch onderzoek, maar het eerste antwoord is vaak niet bruikbaar; oordeel en strategie blijven mensenwerk."
+    },
+    "oecd-deo-2026": {
+      "titel": "OECD Digital Education Outlook 2026",
+      "organisatie": "OESO",
+      "datum": "2026-01-20",
+      "url": "https://www.oecd.org/en/publications/oecd-digital-education-outlook-2026_062a7394-en.html",
+      "bereik": "mondiaal", "brontype": "internationaal",
+      "kern": "Generatieve AI bespaart leraren tijd en werkt meestal aanvullend op de leraar; betere prestaties met AI zijn niet hetzelfde als beter leren."
+    },
+    "oecd-eo-2026": {
+      "titel": "OECD Employment Outlook 2026",
+      "organisatie": "OESO",
+      "datum": "2026-07-01",
+      "datum_benaderd": true,
+      "url": "https://www.oecd.org/en/publications/oecd-employment-outlook-2026_7e710f54-en.html",
+      "bereik": "mondiaal", "brontype": "internationaal",
+      "kern": "Het bewijs voor effecten van AI op jonge werknemers is nog beperkt; werkgevers zien wel dat AI hoogopgeleiden belangrijker maakt en dat gebrek aan vaardigheden de invoering remt."
+    },
+    "ilo-genai-2025": {
+      "titel": "Generative AI and jobs: A 2025 update",
+      "organisatie": "Internationale Arbeidsorganisatie (ILO)",
+      "datum": "2025-05-20",
+      "url": "https://www.ilo.org/publications/generative-ai-and-jobs-2025-update",
+      "bereik": "mondiaal", "brontype": "internationaal",
+      "kern": "Een op de vier werkenden wereldwijd zit in een beroep met enige blootstelling aan generatieve AI, in rijke landen 34%; de meeste banen veranderen eerder dan dat ze verdwijnen."
+    },
+    "wef-fojr-2025": {
+      "titel": "The Future of Jobs Report 2025",
+      "organisatie": "World Economic Forum",
+      "datum": "2025-01-07",
+      "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
+      "bereik": "mondiaal", "brontype": "internationaal",
+      "kern": "AI en big data, cybersecurity, creatief denken en wendbaarheid stijgen het hardst in belang; nauwkeurigheid en routinematige vaardigheden dalen."
+    },
+    "stanford-canaries-2026": {
+      "titel": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence",
+      "organisatie": "Stanford Digital Economy Lab",
+      "datum": "2026-08-12",
+      "url": "https://digitaleconomy.stanford.edu/publication/canaries-in-the-coal-mine/",
+      "bereik": "mondiaal", "brontype": "wetenschap",
+      "kern": "Werkgelegenheid van 22- tot 25-jarigen in AI-gevoelige beroepen zoals softwareontwikkeling ligt 19% onder trend, vooral door minder aannames; waar AI aanvult blijft het werk stabiel of groeit het."
+    }
+  }
+}

@@ -1,0 +1,79 @@
+/* Aanvullende opmaak voor de bronnenpagina */
+.vignet-sterk { background: rgba(3,3,4,.82); }
+.bronnenpagina footer {
+  left: 0; right: 0; bottom: 0; padding: 2.5rem clamp(1rem, 2.5vw, 2rem) clamp(.8rem, 2vw, 1.5rem);
+  background: linear-gradient(180deg, rgba(3,3,4,0), rgba(3,3,4,.95) 55%);
+}
+
+.bronnen {
+  max-width: 900px;
+  padding: 6rem clamp(1.5rem, 7vw, 7rem) 10rem;
+}
+.terug { color: var(--gedempt); text-decoration: none; font-size: .85rem; }
+.terug:hover { color: var(--licht); }
+.bronnen h1 {
+  font-family: var(--serif); font-weight: 400;
+  font-size: clamp(2rem, 4vw, 3rem); margin: 1.5rem 0 1rem;
+}
+.inleiding { color: #d9d1c3; line-height: 1.6; max-width: 40rem; }
+#telling { color: var(--gedempt); }
+
+.acties { display: flex; flex-wrap: wrap; gap: .8rem; margin: 2rem 0 2.5rem; }
+.knop {
+  display: inline-block; padding: .65rem 1.2rem; border-radius: 999px;
+  background: var(--licht); color: #111; font-weight: 600; font-size: .9rem; text-decoration: none;
+  box-shadow: 0 0 24px rgba(var(--licht-rgb), .45);
+  transition: transform .2s var(--zacht), box-shadow .2s;
+}
+.knop:hover, .knop:focus-visible { transform: translateY(-2px); box-shadow: 0 0 34px rgba(var(--licht-rgb), .7); outline: none; }
+.knop-stil { background: transparent; color: var(--tekst); border: 1px solid var(--lijn); box-shadow: none; font-weight: 400; }
+.knop-stil:hover { box-shadow: none; border-color: var(--licht); color: var(--licht); }
+.knop.uit { opacity: .45; pointer-events: none; }
+
+.filters { display: flex; flex-wrap: wrap; gap: .5rem; margin-bottom: 2.5rem; }
+.filter {
+  font: inherit; font-size: .82rem; cursor: pointer;
+  padding: .4rem .85rem; border-radius: 999px;
+  background: transparent; color: var(--gedempt); border: 1px solid var(--lijn);
+  transition: color .2s, border-color .2s, background .2s;
+}
+.filter::before {
+  content: ""; display: inline-block; width: .5em; height: .5em; border-radius: 50%;
+  margin-right: .5em; background: var(--kleur, var(--gedempt)); box-shadow: 0 0 6px var(--kleur, transparent);
+}
+.filter:hover { color: var(--tekst); }
+.filter[aria-pressed="true"] { color: var(--tekst); border-color: var(--kleur, var(--tekst)); background: rgba(255,255,255,.04); }
+
+.bronnen section { margin-top: 3.5rem; }
+.bronnen h2 { font-family: var(--serif); font-weight: 400; font-size: 1.45rem; margin: 0 0 1rem; }
+.aantal { color: var(--gedempt); font-size: .9rem; font-family: var(--sans); margin-left: .3rem; }
+.uitleg { color: var(--gedempt); line-height: 1.6; font-size: .92rem; max-width: 40rem; }
+
+.bronlijst { list-style: none; margin: 0; padding: 0; }
+.bron {
+  border-top: 1px solid var(--lijn); padding: 1.1rem 0;
+  animation: verschijn .5s var(--zacht) both;
+}
+@keyframes verschijn { from { opacity: 0; transform: translateY(8px); } }
+.bron a.bron-titel { font-family: var(--serif); font-size: 1.08rem; color: var(--tekst); text-decoration: none; line-height: 1.35; }
+.bron a.bron-titel:hover { color: var(--licht); }
+.bron-meta { font-size: .8rem; color: var(--gedempt); margin-top: .3rem; }
+.bron-reden { font-size: .86rem; color: #cfc7b8; margin-top: .45rem; line-height: 1.5; }
+.chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .6rem; }
+.chip {
+  font-size: .74rem; padding: .2rem .6rem; border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--kleur) 55%, transparent);
+  color: var(--kleur); background: color-mix(in srgb, var(--kleur) 8%, transparent);
+  font-variant-numeric: tabular-nums;
+}
+.leeg { color: var(--gedempt); font-size: .9rem; border-top: 1px solid var(--lijn); padding: 1rem 0; }
+
+.organisaties { list-style: none; padding: 0; margin: 1rem 0 0; columns: 2 16rem; column-gap: 2rem; }
+.organisaties li { font-size: .88rem; color: #d9d1c3; padding: .25rem 0; break-inside: avoid; }
+.organisaties a { color: inherit; text-decoration: none; }
+.organisaties a:hover { color: var(--licht); }
+.organisaties .soort { color: var(--gedempt); font-size: .75rem; margin-left: .3rem; }
+
+.factoren { display: grid; grid-template-columns: max-content 1fr; gap: .6rem 1.5rem; margin: 1.5rem 0; font-size: .9rem; }
+.factoren dt { color: var(--licht); }
+.factoren dd { margin: 0; color: #d9d1c3; }

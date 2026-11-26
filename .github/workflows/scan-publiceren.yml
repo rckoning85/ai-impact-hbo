@@ -1,0 +1,76 @@
+# Publiceert de uitkomst van de wekelijkse scan.
+# De scan pusht naar een tak 'claude/...'. Deze controle (zonder AI) kijkt of alleen data en voorpagina's
+# zijn gewijzigd en of de bestanden kloppen, en voegt de tak dan samen met main.
+name: Scan publiceren
+
+on:
+  push:
+    branches: ['claude/**']
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: publiceren
+  cancel-in-progress: false
+
+jobs:
+  publiceer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Alleen data en voorpagina's gewijzigd?
+        run: |
+          git fetch origin main
+          BASIS=$(git merge-base origin/main HEAD)
+          echo "Gewijzigde bestanden:"
+          git diff --name-only "$BASIS" HEAD | tee gewijzigd.txt
+          if grep -vE '^(data/[^/]+\.json|omslagen/[A-Za-z0-9._-]+\.(jpg|jpeg|png|webp))$' gewijzigd.txt; then
+            echo "::error::De scan heeft bestanden buiten data/ of omslagen/ gewijzigd. Niet gepubliceerd."
+            exit 1
+          fi
+          # voorpagina's niet groter dan 300 kB
+          for f in $(grep '^omslagen/' gewijzigd.txt || true); do
+            [ -f "$f" ] && [ $(stat -c%s "$f") -gt 300000 ] && { echo "::error::$f is te groot"; exit 1; }
+          done
+          true
+
+      - name: Data controleren
+        run: |
+          node -e '
+            const fs = require("fs");
+            for (const f of fs.readdirSync("data").filter(f => f.endsWith(".json"))) JSON.parse(fs.readFileSync("data/" + f, "utf8"));
+            const d = JSON.parse(fs.readFileSync("data/sectoren.json", "utf8"));
+            const ids = ["gezondheidszorg","sociaal-werk","onderwijs","recht","economie-management","ict","life-sciences"];
+            if (JSON.stringify(d.sectoren.map(s => s.id)) !== JSON.stringify(ids)) throw new Error("Sectoren gewijzigd");
+            for (const s of d.sectoren) {
+              if (typeof s.zin !== "string" || s.zin.length < 20 || s.zin.length > 400) throw new Error("Zin ongeldig: " + s.id);
+              for (const k of s.rapporten) if (!d.rapporten[k.id]) throw new Error("Onbekend rapport " + k.id + " in " + s.id);
+            }
+            for (const [id, r] of Object.entries(d.rapporten)) {
+              if (!/^https?:\/\//.test(r.url)) throw new Error("Ongeldige url bij " + id);
+              if (isNaN(new Date(r.datum))) throw new Error("Ongeldige datum bij " + id);
+              if (r.omslag && !/^omslagen\/[A-Za-z0-9._-]+$/.test(r.omslag)) throw new Error("Ongeldige omslag bij " + id);
+            }
+            console.log("Data in orde.");
+          '
+
+      - name: Samenvoegen met main
+        run: |
+          git config user.name "scan-publicatie-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          TAK="${GITHUB_REF_NAME}"
+          git checkout main
+          git pull --ff-only origin main
+          git merge --no-edit "origin/$TAK" -m "Wekelijkse scan gepubliceerd ($TAK)"
+          git push origin main
+          git push origin --delete "$TAK" || true
+
+      - name: Site opnieuw bouwen
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api -X POST "repos/${{ github.repository }}/pages/builds" || true

@@ -38,6 +38,13 @@ Wijzig alleen bestanden in `data/` en `omslagen/`. Wijzig nooit HTML, CSS, JavaS
      Verwijder het uit `bronnen-log` als het daar stond.
    - **Niet opnemen**: zet het in `data/bronnen-log.json` met status `afgewezen` (met korte reden) of
      `te-beoordelen` (als je het nog niet kon lezen), en `bekeken` met de datum van vandaag.
+   - **Elke** kandidaat die je hebt bekeken komt dus óf in `rapporten`, óf in `bronnen-log`. Niets valt weg:
+     de bronnenpagina laat bezoekers zien wat er is bekeken.
+
+Stap 4, 5 en 6 gelden voor **alle** rapporten in `rapporten`, ook de rapporten die er al langer staan, niet alleen
+voor nieuwe. Werk ze af in volgorde van hoogste gewicht; doe er per run minstens tien, of allemaal als dat lukt.
+Is een rapport een webpagina zonder pdf, zoek dan de pdf van het onderliggende rapport op dezelfde site; is die
+er niet, sla citaat en voorpagina voor dat rapport over.
 
 4. **Citaten.** Voor elk rapport zonder `citaat` met `"geverifieerd": true`:
    - Haal de pdf op (bijvoorbeeld met WebFetch; die bewaart pdf-bytes als lokaal bestand) en haal de tekst per

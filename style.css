@@ -213,7 +213,7 @@ main { position: relative; z-index: 2; }
 .omslag-titel { font-family: var(--serif); font-size: 1.12rem; line-height: 1.25; margin-top: .6rem; }
 .omslag-jaar { margin-top: auto; font-size: .75rem; opacity: .6; }
 
-.open {
+.open-rapport {
   position: absolute; left: 50%; bottom: 1rem; z-index: 3;
   transform: translate(-50%, 8px); opacity: 0;
   padding: .45rem .9rem; border-radius: 999px;
@@ -228,7 +228,7 @@ main { position: relative; z-index: 2; }
   filter: none;
 }
 .rapport a:hover .citaat, .rapport a:focus-visible .citaat { border-color: var(--licht); }
-.rapport a:hover .open, .rapport a:focus-visible .open { opacity: 1; transform: translate(-50%, 0); }
+.rapport a:hover .open-rapport, .rapport a:focus-visible .open-rapport { opacity: 1; transform: translate(-50%, 0); }
 
 .rapport-onder { display: block; margin-top: 1rem; }
 .rapport-titel { display: block; font-family: var(--serif); font-size: 1rem; line-height: 1.35; transition: color .25s; }

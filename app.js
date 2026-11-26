@@ -55,7 +55,7 @@
       const pct = Math.round(r.aandeel * 100);
       a.innerHTML = `
         <span class="citaat"><span class="citaat-tekst"></span><span class="pagina"></span></span>
-        <span class="omslag"><span class="open">Open rapport ↗</span></span>
+        <span class="omslag"><span class="open-rapport">Open rapport ↗</span></span>
         <span class="rapport-onder">
           <span class="rapport-titel"></span>
           <span class="rapport-meta"></span>
@@ -167,7 +167,12 @@
       DATA = d;
       bouwKiezer();
       $("bijgewerkt").textContent = "Bijgewerkt " + new Date(d.bijgewerkt).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
-      toon(location.hash.slice(1), true);
+      // Een link naar een sector (#recht) opent die sector; anders begint de bezoeker bij een willekeurige sector
+      const gevraagd = location.hash.slice(1);
+      const start = d.sectoren.some(s => s.id === gevraagd)
+        ? gevraagd
+        : d.sectoren[Math.floor(Math.random() * d.sectoren.length)].id;
+      toon(start, true);
       window.addEventListener("hashchange", () => toon(location.hash.slice(1)));
     })
     .catch(() => { kern.textContent = "… dat konden we even niet laden. Probeer het later opnieuw."; });

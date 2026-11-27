@@ -26,6 +26,9 @@ Wijzig alleen bestanden in `data/` en `omslagen/`. Wijzig nooit HTML, CSS, JavaS
    Zoek bij de organisaties in `data/organisaties.json` en algemeen, in het Nederlands en Engels, per sector
    (zie de sectoren en opleidingen in `data/sectoren.json`). Kijk ook opnieuw naar items met status
    `te-beoordelen` in `data/bronnen-log.json`.
+   Heeft een sector weinig rapporten met specificiteit `sector`, zoek daar dan extra gericht naar. Voor de
+   sector *Onderzoek* gaat het om onderzoek naar AI in wetenschap en (praktijkgericht) onderzoek: hoe AI het
+   werk van onderzoekers, lectoraten en kenniscentra verandert.
 
 3. **Beoordelen.** Per kandidaat (sla dubbelingen over: vergelijk url en titel met `rapporten` en `bronnen-log`):
    - Voldoet het aan de criteria in `METHODE.md`? Een internationaal rapport telt alleen als het iets zegt
@@ -71,7 +74,7 @@ er niet, sla citaat en voorpagina voor dat rapport over.
    - begint met een kleine letter, eindigt met een punt, maximaal 35 woorden, helder Nederlands zonder jargon;
    - stelt niets wat de rapporten niet dragen; benoem onzekerheid als die er is.
    Werk `vaardigheden.meer` en `vaardigheden.minder` (elk 1 tot 4 korte items) op dezelfde manier bij.
-   Laat `id`, `naam`, `kleur` en `opleidingen` van de sectoren ongemoeid.
+   Laat `id`, `naam`, `kleur`, `golf`, `omvat` en `opleidingen` van de sectoren ongemoeid.
 
 8. **Afronden.**
    - Zet `bijgewerkt` in `data/sectoren.json` op de datum van vandaag.

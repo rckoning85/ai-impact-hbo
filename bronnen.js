@@ -40,7 +40,7 @@
           [...filters.children].forEach(x => x.setAttribute("aria-pressed", String(x === b)));
           const rgb = hexNaarRgb(sector ? sector.kleur : "#ffc46b");
           document.documentElement.style.setProperty("--licht-rgb", rgb.join(", "));
-          if (window.Kaart) window.Kaart.kleur(rgb);
+          if (window.Kaart) window.Kaart.kleur(rgb, false, !!sector && sector.golf === "naar-leiden");
           toon();
         });
         filters.appendChild(b);

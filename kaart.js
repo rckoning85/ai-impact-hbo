@@ -134,6 +134,7 @@
   const rustig = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   let B = 0, H = 0, dpr = 1, schaal = 1, ox = 0, oy = 0, scherm = [];
   let golfStart = -1e9;
+  let naarBinnen = false, verste = 1; // naarBinnen: de golf trekt van buiten naar Leiden toe
 
   // Voorgetekende gloeisprite in een gegeven kleur: witte kern, gekleurde gloed
   function maakSprite([r, g, b]) {
@@ -164,6 +165,8 @@
     const cx = smal ? B * 0.5 : B * 0.68, cy = H * 0.5;
     ox = cx - breedte * schaal / 2; oy = cy - hoogte * schaal / 2;
     scherm = punten.map(p => [ox + (p[0] - MIN_LON) * COS * schaal, oy + (MAX_LAT - p[1]) * schaal]);
+    const [lx, ly] = naarScherm(LEIDEN);
+    verste = Math.max(...scherm.map(([x, y]) => Math.hypot(x - lx, y - ly))) + schaal * 0.2;
     if (rustig) teken(0);
   }
   const naarScherm = ([lon, lat]) => [ox + (lon - MIN_LON) * COS * schaal, oy + (MAX_LAT - lat) * schaal];
@@ -174,9 +177,14 @@
     ctx.globalCompositeOperation = "lighter";
     const eenheid = schaal / 260; // puntgrootte meeschalen met de kaart
     const [lx, ly] = naarScherm(LEIDEN);
-    const golfR = (t - golfStart) * 0.0009 * schaal; // straal in pixels
+    const afgelegd = (t - golfStart) * 0.0009 * schaal; // afgelegde weg van de golf in pixels
     const golfBreedte = schaal * 0.18;
-    const golfLevend = golfR < schaal * 4.5;
+    // Naar buiten: de straal groeit vanaf Leiden. Naar binnen: de straal krimpt van de rand naar Leiden.
+    const golfR = naarBinnen ? verste - afgelegd : afgelegd;
+    const golfLevend = naarBinnen ? golfR > -golfBreedte * 2 : golfR < schaal * 4.5;
+    const sterkte = naarBinnen
+      ? 0.45 + 0.55 * Math.min(1, Math.max(0, 1 - golfR / verste)) // zwelt aan richting Leiden
+      : Math.max(0, 1 - golfR / (schaal * 4.5));
     if (!golfLevend && spriteOud !== spriteNieuw) spriteOud = spriteNieuw; // golf voorbij: nieuwe kleur overal
     for (let i = 0; i < punten.length; i++) {
       const p = punten[i], [x, y] = scherm[i];
@@ -185,8 +193,9 @@
       if (golfLevend) {
         const afstand = Math.hypot(x - lx, y - ly);
         const d = afstand - golfR;
-        h += Math.exp(-(d * d) / (golfBreedte * golfBreedte)) * (p[6] ? 0.25 : 0.9) * Math.max(0, 1 - golfR / (schaal * 4.5));
-        if (afstand > golfR) sprite = spriteOud; // nog niet bereikt door de golf: oude kleur
+        h += Math.exp(-(d * d) / (golfBreedte * golfBreedte)) * (p[6] ? 0.25 : 0.9) * sterkte;
+        // nog niet bereikt door de golf: oude kleur
+        if (naarBinnen ? afstand < golfR : afstand > golfR) sprite = spriteOud;
       }
       const r = p[3] * (p[6] ? eenheid * 4 : eenheid * 4.2);
       ctx.globalAlpha = Math.min(1, h);
@@ -203,10 +212,12 @@
 
   window.Kaart = {
     // Nieuwe kleur [r,g,b]. Met direct=true zonder golf (bij het openen van de pagina).
-    kleur(rgb, direct) {
+    // Met binnen=true golft het licht naar Leiden toe in plaats van vanuit Leiden naar buiten.
+    kleur(rgb, direct, binnen) {
       spriteOud = spriteNieuw;
       spriteNieuw = maakSprite(rgb);
       if (direct || rustig) { spriteOud = spriteNieuw; if (rustig) teken(0); return; }
+      naarBinnen = !!binnen;
       golfStart = performance.now();
     }
   };

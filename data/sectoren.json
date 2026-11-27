@@ -435,6 +435,53 @@
           "specificiteit": "generiek"
         }
       ]
+    },
+    {
+      "id": "onderzoek",
+      "kleur": "#e9efff",
+      "naam": "Onderzoek",
+      "golf": "naar-leiden",
+      "opleidingen": [
+        "Lectoraten en kenniscentra (praktijkgericht onderzoek)"
+      ],
+      "omvat": "Deze sector omvat het praktijkgericht onderzoek van de lectoraten en kenniscentra van Hogeschool Leiden.",
+      "zin": "vooral het kennisintensieve werk te versnellen, zoals zoeken, analyseren en schrijven, al is er nog weinig onderzoek dat specifiek over het onderzoeksvak zelf gaat.",
+      "vaardigheden": {
+        "meer": [
+          "AI-uitkomsten kritisch controleren",
+          "data-analyse",
+          "verantwoord en transparant AI-gebruik"
+        ],
+        "minder": [
+          "routinematig zoek- en schrijfwerk"
+        ]
+      },
+      "rapporten": [
+        {
+          "id": "roa-hbo-ai-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "tno-genai-werk-2025",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "dnb-ai-nl-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "uwv-ai-gebruik-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "ilo-genai-2025",
+          "specificiteit": "generiek"
+        }
+      ]
     }
   ],
   "rapporten": {

@@ -145,8 +145,13 @@ main { position: relative; z-index: 2; }
 }
 .rapporten h2 {
   font-family: var(--serif); font-weight: 400; font-size: 1.4rem;
-  color: var(--gedempt); margin: 0 0 4.5rem;
+  color: var(--gedempt); margin: 0 0 4.5rem; max-width: 46rem; line-height: 1.5;
 }
+.rapporten h2 a {
+  color: var(--licht); text-decoration: underline dotted; text-underline-offset: .25em;
+  transition: color .3s;
+}
+.rapporten h2 a:hover, .rapporten h2 a:focus-visible { color: #fff; }
 
 /* Raster van voorpagina's, met boven elke voorpagina een zwevend citaat */
 .rapport-lijst {

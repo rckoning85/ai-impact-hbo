@@ -25,7 +25,7 @@
     // Sectorkleur: voor de kaart en voor de accenten op de pagina
     const rgb = (sector.kleur || "#ffc46b").match(/[0-9a-f]{2}/gi).map(h => parseInt(h, 16));
     document.documentElement.style.setProperty("--licht-rgb", rgb.join(", "));
-    if (window.Kaart) window.Kaart.kleur(rgb, eerste);
+    if (window.Kaart) window.Kaart.kleur(rgb, eerste, sector.golf === "naar-leiden");
 
     $("sector-naam").textContent = sector.naam;
     [...lijst.children].forEach(li => li.setAttribute("aria-selected", String(li.dataset.id === sector.id)));
@@ -105,7 +105,7 @@
       waarnemer.observe(li);
     });
     $("aantal").textContent = rij.length === 1 ? "gebaseerd op 1 rapport" : `gebaseerd op ${rij.length} rapporten`;
-    $("opleidingen").textContent = `Deze sector omvat de opleidingen: ${sector.opleidingen.join(", ")}.`;
+    $("opleidingen").textContent = sector.omvat || `Deze sector omvat de opleidingen: ${sector.opleidingen.join(", ")}.`;
   }
 
   const waarnemer = new IntersectionObserver(items => {

@@ -9,6 +9,15 @@
       "voorgesteld": "2026-11-26",
       "issue": 1,
       "verwerkt": true
+    },
+    {
+      "soort": "organisatie",
+      "link": "https://www.movisie.nl/",
+      "naam": "Movisie",
+      "opmerking": "",
+      "voorgesteld": "2026-11-27",
+      "issue": 2,
+      "verwerkt": false
     }
   ]
 }

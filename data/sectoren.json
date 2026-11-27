@@ -87,6 +87,14 @@
         {
           "id": "tno-toekomst-werk-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "nivel-ai-zorg-2026",
+          "specificiteit": "sector"
+        },
+        {
+          "id": "esb-levels-schokker-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -145,6 +153,10 @@
         {
           "id": "tno-toekomst-werk-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "nivel-ai-zorg-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -199,6 +211,10 @@
         },
         {
           "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "esb-levels-schokker-2026",
           "specificiteit": "generiek"
         }
       ]
@@ -258,6 +274,14 @@
         },
         {
           "id": "tno-toekomst-werk-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "esb-cnossen-starters-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "esb-levels-schokker-2026",
           "specificiteit": "generiek"
         }
       ]
@@ -319,6 +343,14 @@
         {
           "id": "tno-toekomst-werk-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "esb-cnossen-starters-2026",
+          "specificiteit": "sector"
+        },
+        {
+          "id": "esb-levels-schokker-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -378,6 +410,18 @@
         {
           "id": "tno-toekomst-werk-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "lf-tech-talent-europe-2026",
+          "specificiteit": "sector"
+        },
+        {
+          "id": "esb-cnossen-starters-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "esb-levels-schokker-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -433,6 +477,10 @@
         {
           "id": "tno-toekomst-werk-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "mpg-ai-research-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -480,6 +528,10 @@
         {
           "id": "ilo-genai-2025",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "mpg-ai-research-2026",
+          "specificiteit": "sector"
         }
       ]
     }
@@ -659,7 +711,13 @@
       "url": "https://www.weforum.org/publications/the-future-of-jobs-report-2025/",
       "bereik": "mondiaal",
       "brontype": "internationaal",
-      "kern": "AI en big data, cybersecurity, creatief denken en wendbaarheid stijgen het hardst in belang; nauwkeurigheid en routinematige vaardigheden dalen."
+      "kern": "AI en big data, cybersecurity, creatief denken en wendbaarheid stijgen het hardst in belang; nauwkeurigheid en routinematige vaardigheden dalen.",
+      "citaat": {
+        "tekst": "resulting in net growth of 7% of total employment, or 78 million jobs.",
+        "pagina": 5,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/wef-fojr-2025.jpg"
     },
     "stanford-canaries-2026": {
       "titel": "Canaries in the Coal Mine? Six Facts about the Recent Employment Effects of Artificial Intelligence",
@@ -721,6 +779,78 @@
         "geverifieerd": true
       },
       "omslag": "omslagen/tno-toekomst-werk-2026.jpg"
+    },
+    "nivel-ai-zorg-2026": {
+      "titel": "Kunstmatige intelligentie (AI) in de zorg: de meningen van verpleegkundigen, verzorgenden, verpleegkundig specialisten, begeleiders en praktijkondersteuners",
+      "organisatie": "Nivel",
+      "datum": "2026-04-07",
+      "datum_benaderd": true,
+      "url": "https://www.nivel.nl/sites/default/files/bestanden/13349.pdf",
+      "bereik": "nl",
+      "brontype": "wetenschap",
+      "kern": "Ruim de helft van 890 zorgprofessionals gebruikt AI, vooral voor opzoeken en verslaglegging; slechts een kwart verwacht dat AI een deel van hun rol overneemt, twee derde verwacht dat de rol verandert.",
+      "citaat": {
+        "tekst": "Zo verwacht slechts een kwart van de zorgprofessionals dat AI in de toekomst een deel van hun rol zal overnemen.",
+        "pagina": 4,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/nivel-ai-zorg-2026.jpg"
+    },
+    "lf-tech-talent-europe-2026": {
+      "titel": "2026 State of Tech Talent Europe Report: AI, Technical Hiring, and the Skills Gap in Europe",
+      "organisatie": "Linux Foundation",
+      "datum": "2026-06-03",
+      "datum_benaderd": true,
+      "url": "https://www.linuxfoundation.org/hubfs/Research%20Reports/State-of-Tech-Talent-Europe-2026-REV-1.pdf",
+      "bereik": "eu",
+      "brontype": "onderzoeksbureau",
+      "kern": "Uit een enquête onder Europese IT-organisaties verwachten meer bedrijven extra dan minder technisch personeel door AI, maar de instroom van beginnende technische functies krimpt in Europa.",
+      "citaat": {
+        "tekst": "Europe shows a contraction in entry-level technical roles (−3%), in contrast to a positive net effect of +14% in the rest of the world.",
+        "pagina": 5,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/lf-tech-talent-europe-2026.jpg"
+    },
+    "esb-cnossen-starters-2026": {
+      "titel": "Voor de meeste starters verandert AI de arbeidsmarkt nog niet",
+      "organisatie": "ESB (F. Cnossen, wetenschappelijk onderzoek met CBS-microdata)",
+      "datum": "2026-07-08",
+      "url": "https://esb.nu/wp-content/uploads/2026/07/314-317_Cnossen.pdf",
+      "bereik": "nl",
+      "brontype": "wetenschap",
+      "kern": "CBS-gegevens over 2,2 miljoen afgestudeerden laten voor de meeste opleidingen geen trendbreuk zien; alleen bij bedrijfskundige wo-richtingen zakt de werkgelegenheid, wat mogelijk een vroeg teken van AI is.",
+      "citaat": {
+        "tekst": "Kortom: de arbeidsmarkt is voor de meeste starters weinig veranderd sinds 2022.",
+        "pagina": 317,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/esb-cnossen-starters-2026.jpg"
+    },
+    "esb-levels-schokker-2026": {
+      "titel": "AI vraagt om herziening van expertiseontwikkeling",
+      "organisatie": "ESB (M. Levels, Universiteit Maastricht, en T. Schokker, Ministerie van OCW)",
+      "datum": "2026-07-30",
+      "url": "https://esb.nu/wp-content/uploads/2026/07/327-329_LevelsSchokker.pdf",
+      "bereik": "nl",
+      "brontype": "wetenschap",
+      "kern": "AI kan taken vervangen, het werk nivelleren of expertise versterken; vooral instapfuncties in o.a. advocatuur, accountancy en programmeren staan onder druk, waardoor de leerladder van junior naar senior wankelt.",
+      "citaat": {
+        "tekst": "AI zet de traditionele leerladder van een junior positie naar senior expert onder druk.",
+        "pagina": 327,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/esb-levels-schokker-2026.jpg"
+    },
+    "mpg-ai-research-2026": {
+      "titel": "Who uses AI in research, and for what? Large-scale survey evidence from Germany",
+      "organisatie": "Max Planck Society / Fraunhofer Society (Research Policy)",
+      "datum": "2025-11-27",
+      "datum_benaderd": true,
+      "url": "https://doi.org/10.1016/j.respol.2025.105381",
+      "bereik": "eu",
+      "brontype": "wetenschap",
+      "kern": "Uit een enquête onder ruim 6.000 Duitse onderzoekers gebruikt ongeveer een kwart dagelijks AI, vooral voor ideeën toetsen, code en teksten; juridische onzekerheid en gebrek aan kennis zijn de grootste drempels."
     }
   }
 }

@@ -168,6 +168,78 @@
       "status": "afgewezen",
       "reden": "Normatieve richtlijn voor advocaten, geen onderzoek naar de impact van AI op werk; wel doorzocht als organisatie.",
       "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Rathenau Instituut waarschuwt voor onverantwoord AI-gebruik in de wetenschap (nieuwsbericht)",
+      "organisatie": "Rathenau Instituut (via Cursor/TU Eindhoven)",
+      "url": "https://www.cursor.tue.nl/en/news/2026/mei/week-3/rathenau-warns-against-irresponsible-ai-use-in-science",
+      "status": "afgewezen",
+      "reden": "Nieuwsbericht zonder verwijzing naar een rapport; het project 'AI and Science' loopt nog tot oktober 2026. Volgende scan opnieuw kijken naar een eindpublicatie.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Researcher of the Future: how AI is transforming researchers' daily work",
+      "organisatie": "Elsevier",
+      "url": "https://www.elsevier.com/connect/how-ai-is-transforming-researchers-daily-work",
+      "status": "te-beoordelen",
+      "reden": "Enquête van een wetenschappelijke uitgever, maar de gelezen pagina is een blog zonder steekproef of uitsplitsing naar Nederland/West-Europa; het onderliggende rapport nog te vinden.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Springer Nature-enquête onder onderzoekers over AI (2026)",
+      "organisatie": "Springer Nature",
+      "url": "https://www.springernature.com/it/advancing-discovery/springboard/blog/blogposts-technology-partnerships/researchers-embrace-ai-the-disclosure-gap-is-the-challenge-/52326544",
+      "status": "afgewezen",
+      "reden": "Blogbericht over een mondiale enquête zonder uitsplitsing naar Nederland of West-Europa; niet zelf het rapport gelezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Oxford University Press-enquête: onderzoekers melden AI-gebruik onvolledig (via Times Higher Education)",
+      "organisatie": "Oxford University Press",
+      "url": "https://www.timeshighereducation.com/news/researchers-not-fully-disclosing-ai-use-oup-survey-reveals",
+      "status": "afgewezen",
+      "reden": "Nieuwsbericht over een mondiale enquête; gaat vooral over openheid over AI-gebruik, niet over verandering van het werk.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "The future of nursing with AI (Future Ready Healthcare 2026)",
+      "organisatie": "Wolters Kluwer",
+      "url": "https://www.wolterskluwer.com/nl-nl/expert-insights/the-future-of-nursing-with-ai-where-the-profession-stands-in-a-new-era",
+      "status": "afgewezen",
+      "reden": "Enquête van een softwareleverancier, vooral Amerikaans.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Bericht over AI-bijdrage aan startende juristen (Legal Cheek / LexisNexis, Verenigd Koninkrijk)",
+      "organisatie": "LexisNexis / Legal Cheek",
+      "url": "https://www.legalcheek.com/2026/04/junior-lawyer-development-at-risk-as-ai-takes-over-volume-work-research-warns/",
+      "status": "afgewezen",
+      "reden": "Onderzoek van een leverancier van juridische software, Brits, en via een nieuwsbericht.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "The AI Jobs Transition Framework for the EU",
+      "organisatie": "OpenAI",
+      "url": "https://cdn.openai.com/pdf/the-ai-jobs-transition-framework-for-the-eu.pdf",
+      "status": "afgewezen",
+      "reden": "Opgesteld door een leverancier van AI-producten.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "IZA discussion paper 18723: junior versus senior softwarevacatures",
+      "organisatie": "IZA",
+      "url": "https://www.iza.org/en/publications/dp/18723",
+      "status": "te-beoordelen",
+      "reden": "Mogelijk bruikbaar (wetenschap); pagina niet te lezen en geografisch bereik onduidelijk.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Europese Training Foundation: review over AI en arbeidsmarkt (2026.02992)",
+      "organisatie": "European Training Foundation",
+      "url": "https://www.etf.europa.eu/sites/default/files/2026-04/2026.02992_01_ENN.pdf",
+      "status": "te-beoordelen",
+      "reden": "EU-orgaan; wel gedownload, nog niet gelezen op relevantie voor West-Europese arbeidsmarkten.",
+      "bekeken": "2026-11-27"
     }
   ]
 }

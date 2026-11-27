@@ -27,8 +27,14 @@ Wijzig alleen bestanden in `data/` en `omslagen/`. Wijzig nooit HTML, CSS, JavaS
    (zie de sectoren en opleidingen in `data/sectoren.json`). Kijk ook opnieuw naar items met status
    `te-beoordelen` in `data/bronnen-log.json`.
    **Minimale grondigheid:** doe voor **elke** sector minstens twee eigen zoekopdrachten (Nederlands en Engels),
-   dus niet alleen algemene. Organisaties met een veld `sectoren` zijn sectorspecifiek (kennisinstituten,
-   beroeps- en brancheorganisaties): zoek per sector ook bij die organisaties naar publicaties over AI.
+   dus niet alleen algemene.
+   **Verplicht: elke sectorspecifieke organisatie apart.** Organisaties met een veld `sectoren` zijn
+   sectorspecifiek (kennisinstituten, beroeps- en brancheorganisaties). Doe voor **elke** zo'n organisatie
+   minstens één eigen zoekopdracht, bijvoorbeeld `<naam> kunstmatige intelligentie onderzoek` of
+   `site:<domein van website> AI` (Engels voor buitenlandse organisaties). Doe ze in groepjes tegelijk.
+   Maak daarna een lijstje van alle organisaties met `sectoren` en vink af dat je ze allemaal hebt gehad;
+   noem in je eindsamenvatting hoeveel organisaties je zo hebt doorzocht en welke iets opleverden.
+   Kijk bij deze organisaties terug tot 2023 (niet alleen sinds `bijgewerkt`).
    Een standpunt, richtlijn of handreiking is geen onderzoek: neem alleen publicaties op die iets zeggen over
    de impact van AI op werk, taken of vaardigheden (bijvoorbeeld een enquête, monitor of verkenning).
    Voeg je zelf een organisatie toe aan `data/organisaties.json`, geef dan ook `sectoren` mee als die

@@ -7,7 +7,8 @@
   const kern = $("kern"), vaardigheden = $("vaardigheden");
   const fijneMuis = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-  let DATA = null, huidige = null, focusIndex = -1, sluitTimer = null, wisselTimer = null;
+  let DATA = null, huidige = null, focusIndex = -1, sluitTimer = null, typTeller = 0;
+  const rustigeBeweging = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // ---------- Weging ----------
   // Zie METHODE.md voor uitleg. Het gewicht van een rapport is het product van vier factoren,
@@ -25,27 +26,33 @@
     // Sectorkleur: voor de kaart en voor de accenten op de pagina
     const rgb = (sector.kleur || "#ffc46b").match(/[0-9a-f]{2}/gi).map(h => parseInt(h, 16));
     document.documentElement.style.setProperty("--licht-rgb", rgb.join(", "));
-    // De kaart zegt hoe lang de lichtgolf duurt; de tekst wisselt pas daarna, zodat beide niet tegelijk animeren
-    const golfDuur = window.Kaart ? window.Kaart.kleur(rgb, eerste, sector.golf === "naar-leiden") || 0 : 0;
+    if (window.Kaart) window.Kaart.kleur(rgb, eerste, sector.golf === "naar-leiden");
 
     $("sector-naam").textContent = sector.naam;
     [...lijst.children].forEach(li => li.setAttribute("aria-selected", String(li.dataset.id === sector.id)));
     document.title = `AI en ${sector.naam.toLowerCase()} · Hogeschool Leiden`;
 
-    const vul = () => {
-      kern.textContent = sector.zin;
-      $("meer").textContent = sector.vaardigheden.meer.join(" · ");
-      $("minder").textContent = sector.vaardigheden.minder.join(" · ");
-      kern.classList.remove("weg"); vaardigheden.classList.remove("weg");
-      toonRapporten(sector);
+    $("meer").textContent = sector.vaardigheden.meer.join(" · ");
+    $("minder").textContent = sector.vaardigheden.minder.join(" · ");
+
+    // De zin wordt in één seconde uitgetypt, tegelijk met de lichtgolf (zonder vervagen).
+    // De rapporten worden daarna opgebouwd, zodat dat zware werk niet tijdens het typen gebeurt.
+    const zin = sector.zin, typBeurt = ++typTeller;
+    if (eerste || rustigeBeweging) { kern.textContent = zin; toonRapporten(sector); return; }
+    // Getypt deel zichtbaar, de rest onzichtbaar: zo houdt de zin meteen zijn plek en verspringt er niets
+    const getypt = document.createElement("span"), rest = document.createElement("span");
+    rest.style.visibility = "hidden"; rest.setAttribute("aria-hidden", "true");
+    kern.replaceChildren(getypt, rest);
+    const start = performance.now();
+    const typ = nu => {
+      if (typBeurt !== typTeller) return; // de bezoeker koos intussen een andere sector
+      const deel = Math.min(1, (nu - start) / 1000);
+      const n = Math.ceil(zin.length * deel);
+      getypt.textContent = zin.slice(0, n); rest.textContent = zin.slice(n);
+      if (deel < 1) requestAnimationFrame(typ); else { kern.textContent = zin; toonRapporten(sector); }
     };
-    if (eerste) { vul(); return; }
-    // Eerdere, nog lopende wissel afbreken als de bezoeker snel opnieuw kiest
-    clearTimeout(wisselTimer);
-    wisselTimer = setTimeout(() => {
-      kern.classList.add("weg"); vaardigheden.classList.add("weg");
-      wisselTimer = setTimeout(vul, 450);
-    }, golfDuur);
+    rest.textContent = zin;
+    requestAnimationFrame(typ);
   }
 
   function toonRapporten(sector) {

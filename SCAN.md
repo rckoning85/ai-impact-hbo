@@ -26,9 +26,14 @@ Wijzig alleen bestanden in `data/` en `omslagen/`. Wijzig nooit HTML, CSS, JavaS
    Zoek bij de organisaties in `data/organisaties.json` en algemeen, in het Nederlands en Engels, per sector
    (zie de sectoren en opleidingen in `data/sectoren.json`). Kijk ook opnieuw naar items met status
    `te-beoordelen` in `data/bronnen-log.json`.
-   Heeft een sector weinig rapporten met specificiteit `sector`, zoek daar dan extra gericht naar. Voor de
-   sector *Onderzoek* gaat het om onderzoek naar AI in wetenschap en (praktijkgericht) onderzoek: hoe AI het
-   werk van onderzoekers, lectoraten en kenniscentra verandert.
+   **Minimale grondigheid:** doe voor **elke** sector minstens twee eigen zoekopdrachten (Nederlands en Engels),
+   dus niet alleen algemene. Lees van elke veelbelovende kandidaat de pagina of pdf zelf.
+   **Sectoren met weinig specifiek bewijs:** heeft een sector minder dan drie rapporten met specificiteit
+   `sector`, zoek dan voor die sector met minstens vier extra zoekopdrachten, en kijk daarbij verder terug dan
+   `bijgewerkt`: alles vanaf 2023 (de opkomst van generatieve AI) mag. Voor de sector *Onderzoek* gaat het om
+   onderzoek naar AI in wetenschap en (praktijkgericht) onderzoek: hoe AI het werk van onderzoekers, lectoraten
+   en kenniscentra verandert (denk aan KNAW, Rathenau Instituut, NWO, Universiteiten van Nederland,
+   Vereniging Hogescholen, Europese Commissie, OESO, en wetenschappelijke uitgevers met eigen enquêtes).
 
 3. **Beoordelen.** Per kandidaat (sla dubbelingen over: vergelijk url en titel met `rapporten` en `bronnen-log`):
    - Voldoet het aan de criteria in `METHODE.md`? Een internationaal rapport telt alleen als het iets zegt
@@ -86,4 +91,5 @@ er niet, sla citaat en voorpagina voor dat rapport over.
    - Sluit af met een korte samenvatting: nieuwe bronnen, afgewezen bronnen, gewijzigde zinnen (oud en nieuw),
      toegevoegde citaten en voorpagina's, en wat niet lukte.
 
-Is er deze week niets nieuws, dan zet je alleen `bijgewerkt` en eventuele `bekeken`-datums bij, en push je dat.
+Is er na het zoeken volgens stap 2 (inclusief de minimale grondigheid) echt niets nieuws, dan zet je alleen
+`bijgewerkt` en eventuele `bekeken`-datums bij, en push je dat. Neem liever de tijd dan dat je stappen overslaat.

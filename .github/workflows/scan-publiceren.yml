@@ -41,12 +41,15 @@ jobs:
 
       - name: Data controleren
         run: |
+          # De sectoren (id, naam, kleur, golf) moeten gelijk zijn aan die op main: de scan mag ze niet wijzigen
+          git show origin/main:data/sectoren.json > /tmp/main-sectoren.json
           node -e '
             const fs = require("fs");
             for (const f of fs.readdirSync("data").filter(f => f.endsWith(".json"))) JSON.parse(fs.readFileSync("data/" + f, "utf8"));
             const d = JSON.parse(fs.readFileSync("data/sectoren.json", "utf8"));
-            const ids = ["gezondheidszorg","sociaal-werk","onderwijs","recht","economie-management","ict","life-sciences"];
-            if (JSON.stringify(d.sectoren.map(s => s.id)) !== JSON.stringify(ids)) throw new Error("Sectoren gewijzigd");
+            const m = JSON.parse(fs.readFileSync("/tmp/main-sectoren.json", "utf8"));
+            const vast = s => JSON.stringify([s.id, s.naam, s.kleur, s.golf || null]);
+            if (JSON.stringify(d.sectoren.map(vast)) !== JSON.stringify(m.sectoren.map(vast))) throw new Error("Sectoren gewijzigd");
             for (const s of d.sectoren) {
               if (typeof s.zin !== "string" || s.zin.length < 20 || s.zin.length > 400) throw new Error("Zin ongeldig: " + s.id);
               for (const k of s.rapporten) if (!d.rapporten[k.id]) throw new Error("Onbekend rapport " + k.id + " in " + s.id);

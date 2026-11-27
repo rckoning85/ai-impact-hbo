@@ -213,12 +213,14 @@
   window.Kaart = {
     // Nieuwe kleur [r,g,b]. Met direct=true zonder golf (bij het openen van de pagina).
     // Met binnen=true golft het licht naar Leiden toe in plaats van vanuit Leiden naar buiten.
+    // Geeft terug na hoeveel milliseconden de golf de hele kaart is gepasseerd (0 zonder golf).
     kleur(rgb, direct, binnen) {
       spriteOud = spriteNieuw;
       spriteNieuw = maakSprite(rgb);
-      if (direct || rustig) { spriteOud = spriteNieuw; if (rustig) teken(0); return; }
+      if (direct || rustig) { spriteOud = spriteNieuw; if (rustig) teken(0); return 0; }
       naarBinnen = !!binnen;
       golfStart = performance.now();
+      return Math.round(verste / (0.0009 * schaal));
     }
   };
 })();

@@ -7,7 +7,7 @@
   const kern = $("kern"), vaardigheden = $("vaardigheden");
   const fijneMuis = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
-  let DATA = null, huidige = null, focusIndex = -1, sluitTimer = null;
+  let DATA = null, huidige = null, focusIndex = -1, sluitTimer = null, wisselTimer = null;
 
   // ---------- Weging ----------
   // Zie METHODE.md voor uitleg. Het gewicht van een rapport is het product van vier factoren,
@@ -25,7 +25,8 @@
     // Sectorkleur: voor de kaart en voor de accenten op de pagina
     const rgb = (sector.kleur || "#ffc46b").match(/[0-9a-f]{2}/gi).map(h => parseInt(h, 16));
     document.documentElement.style.setProperty("--licht-rgb", rgb.join(", "));
-    if (window.Kaart) window.Kaart.kleur(rgb, eerste, sector.golf === "naar-leiden");
+    // De kaart zegt hoe lang de lichtgolf duurt; de tekst wisselt pas daarna, zodat beide niet tegelijk animeren
+    const golfDuur = window.Kaart ? window.Kaart.kleur(rgb, eerste, sector.golf === "naar-leiden") || 0 : 0;
 
     $("sector-naam").textContent = sector.naam;
     [...lijst.children].forEach(li => li.setAttribute("aria-selected", String(li.dataset.id === sector.id)));
@@ -39,8 +40,12 @@
       toonRapporten(sector);
     };
     if (eerste) { vul(); return; }
-    kern.classList.add("weg"); vaardigheden.classList.add("weg");
-    setTimeout(vul, 450);
+    // Eerdere, nog lopende wissel afbreken als de bezoeker snel opnieuw kiest
+    clearTimeout(wisselTimer);
+    wisselTimer = setTimeout(() => {
+      kern.classList.add("weg"); vaardigheden.classList.add("weg");
+      wisselTimer = setTimeout(vul, 450);
+    }, golfDuur);
   }
 
   function toonRapporten(sector) {

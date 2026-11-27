@@ -48,6 +48,9 @@ Een citaat staat alleen tussen aanhalingstekens op de site als de scan heeft gec
 letterlijk in de tekst van het rapport staat, op de genoemde pagina. Anders toont de site een korte
 samenvatting, gemarkeerd als "samenvatting".
 
+Een rapport kan per sector een eigen citaat hebben, dat specifiek over die sector gaat. Dat gaat voor het
+algemene citaat van het rapport. Ook voor dit citaat geldt: alleen als het letterlijk op de genoemde pagina staat.
+
 ## Bestanden
 
 | Bestand | Inhoud |

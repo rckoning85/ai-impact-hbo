@@ -13,7 +13,10 @@ window.Weging = {
         * (m.bereik[r.bereik] ?? 0.5)
         * (m.specificiteit[koppeling.specificiteit] ?? 0.6)
         * (m.brontype[r.brontype] ?? 0.8);
-      return { ...r, id: koppeling.id, specificiteit: koppeling.specificiteit, ruwe };
+      // Een citaat bij de koppeling (specifiek voor deze sector) gaat voor het algemene citaat van het rapport
+      const citaat = koppeling.citaat && koppeling.citaat.tekst && koppeling.citaat.geverifieerd === true
+        ? koppeling.citaat : r.citaat;
+      return { ...r, citaat, id: koppeling.id, specificiteit: koppeling.specificiteit, ruwe };
     }).filter(r => r && r.ruwe >= m.drempel);
     const totaal = rij.reduce((s, r) => s + r.ruwe, 0) || 1;
     return rij.map(r => ({ ...r, aandeel: r.ruwe / totaal })).sort((a, b) => b.aandeel - a.aandeel);

@@ -60,7 +60,7 @@ Wijzig alleen bestanden in `data/` en `omslagen/`. Wijzig nooit HTML, CSS, JavaS
    - **Elke** kandidaat die je hebt bekeken komt dus óf in `rapporten`, óf in `bronnen-log`. Niets valt weg:
      de bronnenpagina laat bezoekers zien wat er is bekeken.
 
-Stap 4, 5 en 6 gelden voor **alle** rapporten in `rapporten`, ook de rapporten die er al langer staan, niet alleen
+Stap 4, 4b, 5 en 6 gelden voor **alle** rapporten in `rapporten`, ook de rapporten die er al langer staan, niet alleen
 voor nieuwe. Werk ze af in volgorde van hoogste gewicht; doe er per run minstens tien, of allemaal als dat lukt.
 Is een rapport een webpagina zonder pdf, zoek dan de pdf van het onderliggende rapport op dezelfde site; is die
 er niet, sla citaat en voorpagina voor dat rapport over.
@@ -75,6 +75,24 @@ er niet, sla citaat en voorpagina voor dat rapport over.
      `"citaat": { "tekst": "...", "pagina": N, "geverifieerd": true }` (N = paginanummer zoals gedrukt op de
      pagina; als dat niet te vinden is, het pdf-paginanummer).
    - Lukt dat niet, schrijf dan geen citaat. Een verzonnen of licht aangepast citaat is het ergste wat kan gebeuren.
+
+4b. **Citaten per sector.** Het citaat bij een rapport (stap 4) is algemeen en staat bij elke sector waaraan het
+   rapport gekoppeld is. Zoek daarom ook per koppeling (elk item in `rapporten` van een sector) een citaat dat
+   specifiek over **die sector** gaat. Doe dit voor elke koppeling zonder `citaat` met `"geverifieerd": true`.
+   - Zoek in de tekst van het rapport naar passages over de sector: de sectornaam, de opleidingen en beroepen
+     in `opleidingen` en `omvat`, en verwante termen (bijvoorbeeld bij *Economie en management*: financiële sector,
+     accountancy, administratief en commercieel werk, management, bedrijfsleven, beroepsklassen als
+     "bedrijfseconomische en administratieve beroepen"). Tabellen en grafiekbijschriften tellen niet; kies lopende tekst.
+   - Kies één zin van maximaal 30 woorden die iets zegt over AI en werk **in deze sector** (cijfer, verwachting,
+     verandering in taken of vaardigheden), in de originele taal.
+   - **Controleer** precies zoals in stap 4: na het samenvoegen van witruimte en afgebroken woorden moet de zin
+     letterlijk voorkomen in de tekst van de genoemde pagina. Alleen dan schrijf je bij de koppeling
+     `"citaat": { "tekst": "...", "pagina": N, "geverifieerd": true }`, bijvoorbeeld
+     `{ "id": "dnb-ai-nl-2026", "specificiteit": "sector", "citaat": { ... } }`.
+   - Zegt het rapport niets specifieks over de sector (vaak bij `specificiteit` `generiek`), schrijf dan bij de koppeling
+     `"citaat": { "geen": true }` zodat je hem een volgende keer overslaat; de site toont dan het algemene citaat.
+   - Gebruik nooit hetzelfde citaat bij twee sectoren, behalve als het algemene citaat al sectorspecifiek is.
+   - Doe dit per run voor minstens alle koppelingen met `specificiteit` `sector`, en daarna zoveel mogelijk andere.
 
 5. **Voorpagina's.** Voor elk rapport met een pdf en zonder `omslag`: maak van pagina 1 een jpg van 400 pixels
    breed, kwaliteit ongeveer 80 (bijvoorbeeld `pdftoppm -f 1 -l 1 -scale-to-x 400 -scale-to-y -1 -jpeg -jpegopt quality=80`),
@@ -100,7 +118,7 @@ er niet, sla citaat en voorpagina voor dat rapport over.
      `claude/scan-<JJJJ-MM-DD>` (bijvoorbeeld `git push origin HEAD:claude/scan-2026-11-30`).
      Een GitHub-controle publiceert de wijzigingen daarna automatisch.
    - Sluit af met een korte samenvatting: nieuwe bronnen, afgewezen bronnen, gewijzigde zinnen (oud en nieuw),
-     toegevoegde citaten en voorpagina's, en wat niet lukte.
+     toegevoegde citaten (algemeen en per sector) en voorpagina's, en wat niet lukte.
 
 Is er na het zoeken volgens stap 2 (inclusief de minimale grondigheid) echt niets nieuws, dan zet je alleen
 `bijgewerkt` en eventuele `bekeken`-datums bij, en push je dat. Neem liever de tijd dan dat je stappen overslaat.

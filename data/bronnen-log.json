@@ -234,11 +234,43 @@
       "bekeken": "2026-11-27"
     },
     {
-      "titel": "Europese Training Foundation: review over AI en arbeidsmarkt (2026.02992)",
-      "organisatie": "European Training Foundation",
-      "url": "https://www.etf.europa.eu/sites/default/files/2026-04/2026.02992_01_ENN.pdf",
+      "titel": "The AI imperative: Reshaping of the legal industry",
+      "organisatie": "Deloitte",
+      "url": "https://www.deloitte.com/nl/nl/services/legal/research/ai-imperative-reshaping-of-the-legal-industry.html",
+      "status": "afgewezen",
+      "reden": "Mondiale enquête onder ruim 100 juridische leiders (vooral bedrijfsjuristen) zonder uitsplitsing naar Nederland; zegt weinig over werk van juristen in opleiding.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Randstad-onderzoek: vraag naar AI-vaardigheden vervijfvoudigd",
+      "organisatie": "Randstad",
+      "url": "https://www.randstad.nl/over-randstad/pers/persberichten/2026/11/wereldwijde-vraag-naar-ai-talent-stijgt-met-86",
+      "status": "afgewezen",
+      "reden": "Persbericht van een uitzendbureau met commercieel belang; mondiaal en zonder controleerbare methode.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Hoe AI de sectoren IT en zakelijke dienstverlening verandert",
+      "organisatie": "RaboResearch",
+      "url": "https://www.rabobank.nl/kennis/d011532294-hoe-ai-de-sectoren-it-en-zakelijke-dienstverlening-verandert",
       "status": "te-beoordelen",
-      "reden": "EU-orgaan; wel gedownload, nog niet gelezen op relevantie voor West-Europese arbeidsmarkten.",
+      "reden": "Mogelijk bruikbaar voor ICT en economie; pagina geeft 403 en is nog niet gelezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "AI in Health Digital Brief 2026",
+      "organisatie": "Europese Commissie (Digital Skills & Jobs Platform)",
+      "url": "https://digital-skills-jobs.europa.eu/system/files/2026-08/AI_in_Health_Digital_Brief_2026.pdf",
+      "status": "te-beoordelen",
+      "reden": "Pdf is niet als tekst uit te lezen; inhoud en bereik nog te controleren.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Understanding the emerging use of AI in social work (Social Work England)",
+      "organisatie": "Social Work England",
+      "url": "https://www.socialworkengland.org.uk/about/publications/the-emerging-use-of-artificial-intelligence-ai-in-social-work/",
+      "status": "afgewezen",
+      "reden": "Samenvatting van hetzelfde onderzoek als Research in Practice; dat rapport is zelf opgenomen.",
       "bekeken": "2026-11-27"
     }
   ]

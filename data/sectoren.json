@@ -95,6 +95,14 @@
         {
           "id": "esb-levels-schokker-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "who-europe-ai-health-2026",
+          "specificiteit": "sector"
+        },
+        {
+          "id": "uva-innovatiemonitor-zorg-2026",
+          "specificiteit": "sector"
         }
       ]
     },
@@ -157,6 +165,10 @@
         {
           "id": "nivel-ai-zorg-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "research-in-practice-swe-ai-2026",
+          "specificiteit": "sector"
         }
       ]
     },
@@ -283,6 +295,10 @@
         {
           "id": "esb-levels-schokker-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "etf-ai-labour-markets-2026",
+          "specificiteit": "generiek"
         }
       ]
     },
@@ -350,6 +366,10 @@
         },
         {
           "id": "esb-levels-schokker-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "etf-ai-labour-markets-2026",
           "specificiteit": "generiek"
         }
       ]
@@ -421,6 +441,10 @@
         },
         {
           "id": "esb-levels-schokker-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "etf-ai-labour-markets-2026",
           "specificiteit": "generiek"
         }
       ]
@@ -851,6 +875,61 @@
       "bereik": "eu",
       "brontype": "wetenschap",
       "kern": "Uit een enquête onder ruim 6.000 Duitse onderzoekers gebruikt ongeveer een kwart dagelijks AI, vooral voor ideeën toetsen, code en teksten; juridische onzekerheid en gebrek aan kennis zijn de grootste drempels."
+    },
+    "research-in-practice-swe-ai-2026": {
+      "titel": "Understanding the emerging use of AI in social work education and practice in England",
+      "organisatie": "Research in Practice, in opdracht van Social Work England",
+      "datum": "2026-01-21",
+      "url": "https://www.researchinpractice.org.uk/media/ictnerok/understanding-the-emerging-use-of-artificial-intelligence-ai-in-social-work-education-and-practice-in-england-swe-web.pdf",
+      "bereik": "eu",
+      "brontype": "onderzoeksbureau",
+      "kern": "Generatieve AI is in Engeland de meest gebruikte AI in het sociaal werk; het scheelt administratietijd, maar privacy, vooroordelen en het ontbreken van richtlijnen houden werkgevers tegen.",
+      "citaat": {
+        "tekst": "The use of AI by social workers has the potential to provide efficiency gains, including improving the quality of case recording and making better use of case record data.",
+        "pagina": 3,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/research-in-practice-swe-ai-2026.jpg"
+    },
+    "who-europe-ai-health-2026": {
+      "titel": "Artificial intelligence is reshaping health systems: state of readiness across the European Union",
+      "organisatie": "WHO Regionaal Kantoor voor Europa",
+      "datum": "2026-04-20",
+      "url": "https://iris.who.int/server/api/core/bitstreams/ae3fcbfc-b6a0-4aad-a0b3-35027b451648/content",
+      "bereik": "eu",
+      "brontype": "internationaal",
+      "kern": "EU-lidstaten zien AI vooral als middel om de druk op zorgpersoneel te verlagen, maar scholing in AI-vaardigheden is nog schaars en ontbrekende training kan leiden tot overmatig vertrouwen in AI.",
+      "citaat": {
+        "tekst": "Reducing pressure on the health care workforce was the second highest ranked opportunity, with 96% (26 of 27) of EU Member States saying it was of major or moderate relevance.",
+        "pagina": 33,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/who-europe-ai-health-2026.jpg"
+    },
+    "uva-innovatiemonitor-zorg-2026": {
+      "titel": "Innovatiemonitor voor de Zorg 2026",
+      "organisatie": "Amsterdam UMC, Universiteit van Amsterdam en SEO Economisch Onderzoek",
+      "datum": "2026-09-03",
+      "url": "https://www.uva.nl/content/nieuws/persberichten/2026/09/zorg-op-een-kruispunt-verbeteren-of-vernieuwen.html",
+      "bereik": "nl",
+      "brontype": "wetenschap",
+      "kern": "Nederlandse zorgorganisaties zetten AI vaker in om werk te ondersteunen dan om taken over te nemen, maar lopen achter in AI-volwassenheid en professionals missen vaak de vaardigheden om te innoveren."
+    },
+    "etf-ai-labour-markets-2026": {
+      "titel": "The impact of AI on labour markets: what we know so far",
+      "organisatie": "European Training Foundation",
+      "datum": "2026-04-01",
+      "datum_benaderd": true,
+      "url": "https://www.etf.europa.eu/sites/default/files/2026-04/2026.02992_01_ENN.pdf",
+      "bereik": "mondiaal",
+      "brontype": "internationaal",
+      "kern": "Literatuuroverzicht: AI verandert vooral de taakinhoud van beroepen in plaats van banen te laten verdwijnen, maar instapfuncties met routinematige taken lijken het meest blootgesteld.",
+      "citaat": {
+        "tekst": "subsequent more refined studies recognise job transformation as the most common effect, by shifting the relative importance of tasks within each occupation.",
+        "pagina": 6,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/etf-ai-labour-markets-2026.jpg"
     }
   }
 }

@@ -118,8 +118,8 @@
       "organisatie": "OESO",
       "url": "https://www.oecd.org/els/the-impact-of-ai-on-the-workplace-evidence-from-oecd-case-studies-of-ai-implementation-2247ce58-en.htm",
       "status": "te-beoordelen",
-      "reden": "Mogelijk bruikbaar (internationaal); pagina niet bereikbaar (403), nog te lezen.",
-      "bekeken": "2026-11-26"
+      "reden": "Mogelijk bruikbaar (internationaal); pagina geeft nog steeds 403, nog te lezen.",
+      "bekeken": "2026-11-27"
     },
     {
       "titel": "Hoge loonkosten dwingen ondernemers tot AI-gebruik",
@@ -160,6 +160,14 @@
       "status": "te-beoordelen",
       "reden": "Nog niet gelezen.",
       "bekeken": "2026-11-26"
+    },
+    {
+      "titel": "Aanbevelingen AI in de advocatuur (herziene versie 2026)",
+      "organisatie": "Nederlandse Orde van Advocaten",
+      "url": "https://www.advocatenorde.nl/sites/default/files/2026-11/Aanbevelingen%20AI%20in%20de%20advocatuur%202026%20DEF.pdf",
+      "status": "afgewezen",
+      "reden": "Normatieve richtlijn voor advocaten, geen onderzoek naar de impact van AI op werk; wel doorzocht als organisatie.",
+      "bekeken": "2026-11-27"
     }
   ]
 }

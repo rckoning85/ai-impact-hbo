@@ -1,5 +1,5 @@
 {
-  "bijgewerkt": "2026-11-26",
+  "bijgewerkt": "2026-11-27",
   "methode": {
     "halfwaardetijd_maanden": 18,
     "drempel": 0.05,
@@ -582,8 +582,13 @@
       "url": "https://mxi.nl/uploads/files/publication/ai-monitor-ggz-2026.pdf",
       "bereik": "nl",
       "brontype": "onderzoeksbureau",
-      "kern": "96% van de deelnemende ggz-organisaties gebruikt spraakgestuurd rapporteren; werkdruk verlagen is voor alle organisaties de belangrijkste reden, maar de randvoorwaarden zijn nergens volledig op orde.",
-      "omslag": "omslagen/mi-ai-monitor-ggz-2026.jpg"
+      "kern": "98% van de ggz-organisaties is bezig met spraakgestuurd rapporteren; werkdruk verlagen is de belangrijkste drijfveer, maar geen enkele organisatie heeft alle randvoorwaarden volledig op orde.",
+      "omslag": "omslagen/mi-ai-monitor-ggz-2026.jpg",
+      "citaat": {
+        "tekst": "De meeste AI-toepassingen richten zich op administratieve ondersteuning, verslaglegging, kennisontsluiting en voorbereiding van gesprekken.",
+        "pagina": 6,
+        "geverifieerd": true
+      }
     },
     "swn-nulmeting-ai-2026": {
       "titel": "Onderzoek: AI biedt kansen voor sociaal werk, menselijke maat blijft leidend",

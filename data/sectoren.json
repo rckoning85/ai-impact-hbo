@@ -103,6 +103,10 @@
         {
           "id": "uva-innovatiemonitor-zorg-2026",
           "specificiteit": "sector"
+        },
+        {
+          "id": "nivel-ai-huisartsen-2026",
+          "specificiteit": "sector"
         }
       ]
     },
@@ -228,6 +232,10 @@
         {
           "id": "esb-levels-schokker-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "voion-ai-vo-2025",
+          "specificiteit": "sector"
         }
       ]
     },
@@ -298,6 +306,10 @@
         },
         {
           "id": "etf-ai-labour-markets-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "uwv-regio-in-beeld-2026",
           "specificiteit": "generiek"
         }
       ]
@@ -371,6 +383,10 @@
         {
           "id": "etf-ai-labour-markets-2026",
           "specificiteit": "generiek"
+        },
+        {
+          "id": "uwv-regio-in-beeld-2026",
+          "specificiteit": "sector"
         }
       ]
     },
@@ -445,6 +461,10 @@
         },
         {
           "id": "etf-ai-labour-markets-2026",
+          "specificiteit": "generiek"
+        },
+        {
+          "id": "uwv-regio-in-beeld-2026",
           "specificiteit": "generiek"
         }
       ]
@@ -556,6 +576,10 @@
         {
           "id": "mpg-ai-research-2026",
           "specificiteit": "sector"
+        },
+        {
+          "id": "uwv-regio-in-beeld-2026",
+          "specificiteit": "generiek"
         }
       ]
     }
@@ -930,6 +954,54 @@
         "geverifieerd": true
       },
       "omslag": "omslagen/etf-ai-labour-markets-2026.jpg"
+    },
+    "nivel-ai-huisartsen-2026": {
+      "titel": "Inzet en behoefte aan AI-ondersteunde digitale toepassingen onder huisartsenpraktijken neemt toe: resultaten meting 2025",
+      "organisatie": "Nivel",
+      "datum": "2026-08-01",
+      "datum_benaderd": true,
+      "url": "https://www.nivel.nl/sites/default/files/bestanden/13491.pdf",
+      "bereik": "nl",
+      "brontype": "wetenschap",
+      "kern": "Bijna de helft van de huisartsenpraktijken zette in 2025 AI-toepassingen in, vooral spraakgestuurde rapportage; praktijken noemen tijdgebrek, kosten en kennis als belemmering en vrezen verlies van persoonlijk contact.",
+      "citaat": {
+        "tekst": "Inmiddels zet bijna de helft van de praktijken kunstmatige intelligentie (AI)-ondersteunde digitale zorgtoepassingen in, terwijl in 2024 nog zo’n 1 op de 5 praktijken die inzette.",
+        "pagina": 1,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/nivel-ai-huisartsen-2026.jpg"
+    },
+    "voion-ai-vo-2025": {
+      "titel": "Implicaties van AI voor werkenden in het vo: verkenning van wat de inzet van AI in de school als arbeidsorganisatie betekent voor de aantrekkelijkheid van het werk",
+      "organisatie": "Voion",
+      "datum": "2025-05-01",
+      "datum_benaderd": true,
+      "url": "https://www.voion.nl/media/vndmskkw/implicaties-van-ai-voor-werkenden-in-het-vo-voion-_def.pdf",
+      "bereik": "nl",
+      "brontype": "onderzoeksbureau",
+      "kern": "AI kan docenten werk uit handen nemen, zoals lesmateriaal maken, maar geeft ook extra taken zoals controle; effect op werkdruk en werkplezier is nog niet vast te stellen en de rol van de docent blijft even belangrijk.",
+      "citaat": {
+        "tekst": "Docenten blijven de regie houden over het grootste deel van de werkzaamheden.",
+        "pagina": 6,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/voion-ai-vo-2025.jpg"
+    },
+    "uwv-regio-in-beeld-2026": {
+      "titel": "Regio in Beeld 2026-2027 Nederland",
+      "organisatie": "UWV",
+      "datum": "2026-10-22",
+      "datum_benaderd": true,
+      "url": "https://www.uwv.nl/assets-kai/files/34005f37-afaa-4c2a-a1ff-9cd0234f8c2e/regio-in-beeld-nederland-2026-2027.pdf",
+      "bereik": "nl",
+      "brontype": "overheid",
+      "kern": "AI neemt vooral routinematig tekst-, data- en administratiewerk over, wat nu vooral de inhoud van functies verandert en minder tot banenverlies leidt; administratieve, financiële, juridische en creatieve beroepen merken dit het eerst.",
+      "citaat": {
+        "tekst": "AI lijkt op de kortere termijn minder te leiden tot het verdwijnen van banen, maar verandert vooral de inhoud en taken van functies.",
+        "pagina": 33,
+        "geverifieerd": true
+      },
+      "omslag": "omslagen/uwv-regio-in-beeld-2026.jpg"
     }
   }
 }

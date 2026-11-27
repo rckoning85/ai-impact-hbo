@@ -272,6 +272,118 @@
       "status": "afgewezen",
       "reden": "Samenvatting van hetzelfde onderzoek als Research in Practice; dat rapport is zelf opgenomen.",
       "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "AI in het sociaal domein: kansen, obstakels en de rol van Divosa",
+      "organisatie": "Divosa",
+      "url": "https://www.divosa.nl/sites/default/files/2024-12/Resultaten%20AI%20in%20het%20sociaal%20domein.pdf",
+      "status": "afgewezen",
+      "reden": "Ledenuitvraag met 38 respondenten (vooral gemeentelijke managers en beleidsmedewerkers); te klein en niet representatief, gaat over beleid en niet over beroepen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "IZA-deelmonitor Naar meer hybride zorg (2e meting)",
+      "organisatie": "RIVM",
+      "url": "https://www.rivm.nl/bibliotheek/rapporten/2026-0078.pdf",
+      "status": "afgewezen",
+      "reden": "Gaat over hybride zorg; AI is hooguit een klein onderdeel en zegt niets over werk of vaardigheden.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Researcher of the Future: Confidence in Research 2025",
+      "organisatie": "Elsevier",
+      "url": "https://www.elsevier.com/insights/confidence-in-research/researcher-of-the-future",
+      "status": "te-beoordelen",
+      "reden": "Wereldwijde enquête (>3.000 onderzoekers) van een uitgever; geen Nederland- of West-Europa-uitsplitsing bevestigd en de pdf is niet zelf gelezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "ExplanAItions 2025",
+      "organisatie": "Wiley",
+      "url": "https://newsroom.wiley.com/press-releases/press-release-details/2025/AI-Adoption-Jumps-to-84-Among-Researchers-as-Expectations-Undergo-Significant-Reality-Check/",
+      "status": "te-beoordelen",
+      "reden": "Wereldwijde enquête (n=2.430) van een uitgever; geen Nederland-uitsplitsing bevestigd; alleen persbericht gelezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "AI-systemen tegen registratielast: verkenning",
+      "organisatie": "Nictiz",
+      "url": "https://nictiz.nl/app/uploads/2025/05/AI-systemen-tegen-registratielast-verkenning.pdf",
+      "status": "te-beoordelen",
+      "reden": "Mogelijk bruikbaar (enquête n=319 over registratielast); pdf gaf 404, nog te lezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Toekomstbestendige zorg met AI (signalement)",
+      "organisatie": "ZonMw",
+      "url": "https://www.zonmw.nl",
+      "status": "te-beoordelen",
+      "reden": "Signalement met literatuur en interviews; exacte pdf nog niet gevonden en niet gelezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Regio in Beeld / WW en AI: persbericht UWV",
+      "organisatie": "DutchNews",
+      "url": "https://www.dutchnews.nl/2026/11/ai-pushing-more-graduates-onto-benefits-says-uwv/",
+      "status": "afgewezen",
+      "reden": "Nieuwsbericht; het onderliggende UWV-rapport (Regio in Beeld 2026-2027) is wel opgenomen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Rapportage AI- en Algoritmerisico's Nederland (RAN), editie maart 2026",
+      "organisatie": "Autoriteit Persoonsgegevens",
+      "url": "https://www.aiactblog.nl/nl/richtsnoeren/rapportage-ai-algoritmes-nederland-ran-maart-2026",
+      "status": "afgewezen",
+      "reden": "Toezichtsmonitor over risico's, niet over de impact op taken of vaardigheden; origineel niet gelezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Verslag bijeenkomst AI en wetenschap",
+      "organisatie": "Rathenau Instituut",
+      "url": "https://www.rathenau.nl/sites/default/files/2026-05/Verslag%20bijeenkomst%2031%20maart%20Rathenau%20Instituut.pdf",
+      "status": "te-beoordelen",
+      "reden": "Werkversie van een toekomstverkenning (project loopt tot okt 2026); eindrapport nog niet verschenen, pdf nog niet gelezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Monitor Digitalisering Onderwijs 2025",
+      "organisatie": "Kennisnet / PO-Raad / VO-raad",
+      "url": "https://vo-raad.nl/artikelen/monitor-digitalisering-onderwijs",
+      "status": "afgewezen",
+      "reden": "Monitor over schoolbeleid; geeft geen inzicht in taken of vaardigheden van leraren.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Agents, robots, and us: how AI reshapes work and skills in Europe",
+      "organisatie": "McKinsey Global Institute",
+      "url": "https://www.mckinsey.com/mgi/our-research/agents-robots-and-us-how-ai-reshapes-work-and-skills-in-Europe",
+      "status": "te-beoordelen",
+      "reden": "Consultancy, toegestaan en Europees; pagina gaf een 503, nog te lezen (is Nederland erin?).",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "Veranderende vaardigheidseisen voor hbo'ers in het tijdperk van GenAI",
+      "organisatie": "ROA / Maastricht University",
+      "url": "https://www.maastrichtuniversity.nl/nl/nieuws/sinds-de-komst-van-genai-veranderen-de-vaardigheden-die-van-hoogopgeleide-starters-op-het",
+      "status": "te-beoordelen",
+      "reden": "Mogelijk gelijk aan het al opgenomen ROA-rapport; nieuwsbericht, de studie zelf nog te vinden en te lezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "EconPol Policy Report 61: AI and the labor market",
+      "organisatie": "ifo / EconPol",
+      "url": "https://ifo.de/DocDL/EconPol_PolicyReport_61_AI_and_Labor_Market.pdf",
+      "status": "te-beoordelen",
+      "reden": "EU-breed en mogelijk bruikbaar; datum en inhoud nog niet gelezen.",
+      "bekeken": "2026-11-27"
+    },
+    {
+      "titel": "DDMO 2026",
+      "organisatie": "DDMA",
+      "url": "https://ddma.nl/download/77958/",
+      "status": "te-beoordelen",
+      "reden": "Brancheorganisatie (marketing); pdf onleesbaar, methode nog te controleren.",
+      "bekeken": "2026-11-27"
     }
   ]
 }

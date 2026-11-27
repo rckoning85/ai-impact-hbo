@@ -102,6 +102,9 @@
         if (o.website) { naam.href = o.website; naam.target = "_blank"; naam.rel = "noopener"; }
         naam.textContent = o.naam;
         const s = document.createElement("span"); s.className = "soort"; s.textContent = BRONTYPE[o.soort] || o.soort;
+        // Sectorspecifieke organisaties: toon voor welke sector(en)
+        const namen = (o.sectoren || []).map(id => (DATA.sectoren.find(x => x.id === id) || {}).naam).filter(Boolean);
+        if (namen.length) s.textContent += " · " + namen.join(", ");
         li.append(naam, s); ul.appendChild(li);
       }
 

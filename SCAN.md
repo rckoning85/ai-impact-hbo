@@ -27,7 +27,12 @@ Wijzig alleen bestanden in `data/` en `omslagen/`. Wijzig nooit HTML, CSS, JavaS
    (zie de sectoren en opleidingen in `data/sectoren.json`). Kijk ook opnieuw naar items met status
    `te-beoordelen` in `data/bronnen-log.json`.
    **Minimale grondigheid:** doe voor **elke** sector minstens twee eigen zoekopdrachten (Nederlands en Engels),
-   dus niet alleen algemene. Lees van elke veelbelovende kandidaat de pagina of pdf zelf.
+   dus niet alleen algemene. Organisaties met een veld `sectoren` zijn sectorspecifiek (kennisinstituten,
+   beroeps- en brancheorganisaties): zoek per sector ook bij die organisaties naar publicaties over AI.
+   Een standpunt, richtlijn of handreiking is geen onderzoek: neem alleen publicaties op die iets zeggen over
+   de impact van AI op werk, taken of vaardigheden (bijvoorbeeld een enquête, monitor of verkenning).
+   Voeg je zelf een organisatie toe aan `data/organisaties.json`, geef dan ook `sectoren` mee als die
+   sectorspecifiek is. Lees van elke veelbelovende kandidaat de pagina of pdf zelf.
    **Sectoren met weinig specifiek bewijs:** heeft een sector minder dan drie rapporten met specificiteit
    `sector`, zoek dan voor die sector met minstens vier extra zoekopdrachten, en kijk daarbij verder terug dan
    `bijgewerkt`: alles vanaf 2023 (de opkomst van generatieve AI) mag. Voor de sector *Onderzoek* gaat het om
